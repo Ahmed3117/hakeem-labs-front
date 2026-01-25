@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروعنا | مختبرات الحكيم الطبية</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .country-selector {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            scrollbar-width: none;
+        }
+
+        .country-selector::-webkit-scrollbar {
+            display: none;
+        }
+
+        .country-btn {
+            padding: 15px 30px;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            white-space: nowrap;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        .country-btn.active {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .branch-card {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .branch-card:hover,
+        .branch-card.active {
+            border-color: var(--secondary);
+            transform: translateX(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .branch-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .branch-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .map-section {
+            margin-top: 40px;
+        }
+
+        .map-container-giant {
+            width: 100%;
+            height: 700px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            .map-container-giant {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/newlogo.png" alt="مختبرات الحكيم الطبية"></a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="packages.html">الباقات</a></li>
+                    <li><a href="locations.html" class="active">فروعنا</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="locations-en.html" class="btn btn-outline">En</a>
+                <button class="mobile-toggle"><span class="bar"></span><span class="bar"></span><span
+                        class="bar"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <!-- Page Header -->
+        <section class="section"
+            style="background: var(--primary-gradient); color: white; text-align: center; padding: 100px 10%;">
+            <h1 style="color: white; font-size: 3.5rem;">تغطية إقليمية واسعة</h1>
+            <p style="font-size: 1.4rem; opacity: 0.9; max-width: 800px; margin: 20px auto;">اختر الدولة والفرع الأقرب
+                إليك للحصول على أدق الخدمات المخبرية.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <span>فروعنا الدولية والمحلية</span>
+                <h2>استكشف مواقعنا</h2>
+            </div>
+
+            <!-- Country Selector -->
+            <div class="country-selector" id="countrySelector">
+                <!-- Will be populated by JS -->
+            </div>
+
+            <!-- Branches List -->
+            <div class="branches-grid" id="branchesGrid">
+                <!-- Will be populated by JS -->
+            </div>
+
+            <!-- Giant Map -->
+            <div class="map-section">
+                <div class="section-title" style="text-align: right; margin-bottom: 30px;">
+                    <h3 id="selectedBranchName">مختبر الحكيم - الفرع الرئيسي</h3>
+                    <p id="selectedBranchAddress">المدينة المنورة، شارع سعد بن خيثمة، مركز الحكيم</p>
+                </div>
+                <div class="map-container-giant">
+                    <iframe id="mainMap" src="" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-col brand-col">
+                <div class="footer-logos">
+                    <img src="assets/newlogo.png" alt="مختبرات الحكيم" style="height: 100px;">
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 400px; line-height: 1.8;">
+                    شريك تشخيصي وصحي قائم على البيانات، يقدم رعاية دقيقة وسريعة تحفظ كرامة الإنسان وتنسجم مع رؤية
+                    المملكة 2030.
+                </p>
+                <div style="margin-top: 30px; font-weight: 700; color: var(--primary);">
+                    دقة. موثوقية. سرعة.
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">عن المختبر</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="packages.html">الباقات والأسعار</a></li>
+                    <li><a href="locations.html">فروعنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>سياساتنا</h4>
+                <ul class="footer-links">
+                    <li><a href="terms-conditions.html">الشروط والأحكام</a></li>
+                    <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                    <li><a href="patient-rights.html">حقوق ومسؤوليات المريض</a></li>
+                    <li><a href="faqs.html">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <ul class="footer-links">
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-phone"
+                            style="color: var(--primary);"></i> +966148482863</li>
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-envelope"
+                            style="color: var(--primary);"></i> info@hakeemlabs.com</li>
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-map-marker-alt"
+                            style="color: var(--primary);"></i> المدينة المنورة، شارع سعد بن خيثمة</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ساعات العمل</h4>
+                <p style="font-size: 0.95rem; color: var(--text-muted);">
+                    السبت–الخميس: 7:30 ص – 10:00 م<br>
+                    الجمعة: مغلق
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>© 2020 مختبرات الحكيم الطبية - AL HAKEEM MEDICAL LABS</div>
+                <div style="font-size: 0.85rem; opacity: 0.7;">تقنية المعلومات بواسطة Rabicana</div>
+            </div>
+        </div>
+
+        <!-- Floating Actions -->
+        <div class="floating-actions">
+            <a href="https://wa.me/966559160005" class="whatsapp-btn" target="_blank" title="تواصل عبر الواتساب">
+                <i class="fab fa-whatsapp"></i>
+                <span class="btn-tooltip">تحدث معنا</span>
+            </a>
+            <div class="scroll-buttons">
+                <button id="scrollToTop" class="scroll-btn" title="العودة للأعلى">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const locationData = [
+            {
+                countryAr: "المملكة العربية السعودية",
+                countryEn: "Saudi Arabia",
+                branches: [
+                    { nameAr: "مختبر الحكيم - المقر الرئيسي", nameEn: "Hakeem Lab - Head Office", addressAr: "المدينة المنورة، شارع سعد بن خيثمة، مركز الحكيم", addressEn: "Madinah, Saad Bin Khaythamah St, Hakeem Center", mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.906967733457!2d39.6052733!3d24.47596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15b227c2f6d5e1f7%3A0xef74a5e30b0b0a8!2zSGFrZWVtIENlbnRlciAtINmF2LHZg9iyINin2YTYrdmD2YrZhQ!5e0!3m2!1sar!2ssa!4v1705664152345!5m2!1sar!2ssa" },
+                    { nameAr: "فرع الرياض", nameEn: "Riyadh Branch", addressAr: "شارع العليا، الرياض", addressEn: "Olaya St, Riyadh", mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.482705123456!2d46.671!3d24.713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d48939b%3A0x60a9f74133fcdadb!2sRiyadh!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa" }
+                ]
+            },
+            {
+                countryAr: "الأردن",
+                countryEn: "Jordan",
+                branches: [
+                    { nameAr: "فرع عمان", nameEn: "Amman Branch", addressAr: "عمان، الأردن", addressEn: "Amman, Jordan", mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3384.6!2d35.91!3d31.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca062886311bd%3A0x927ae136cf9882d2!2sAmman!5e0!3m2!1sen!2sjo!4v1705664152345!5m2!1sen!2sjo" },
+                    { nameAr: "فرع إربد", nameEn: "Irbid Branch", addressAr: "إربد، الأردن", addressEn: "Irbid, Jordan", mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.4!2d35.85!3d32.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c6014e3089403%3A0xa94458f273030263!2sIrbid!5e0!3m2!1sen!2sjo!4v1705664152345!5m2!1sen!2sjo" },
+                    { nameAr: "فرع العقبة", nameEn: "Aqaba Branch", addressAr: "العقبة، الأردن", addressEn: "Aqaba, Jordan", mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3472.0!2d35.0!3d29.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15006fd64e320d7d%3A0x959714399e52c803!2sAqaba!5e0!3m2!1sen!2sjo!4v1705664152345!5m2!1sen!2sjo" }
+                ]
+            },
+            {
+                countryAr: "سلطنة عمان",
+                countryEn: "Oman",
+                branches: [
+                    { nameAr: "فرع مسقط", nameEn: "Muscat Branch", addressAr: "مسقط، سلطنة عمان", addressEn: "Muscat, Oman", mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4!2d58.4!3d23.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91fbd50917208d%3A0xf59286d9a04a!2sMuscat!5e0!3m2!1sen!2som!4v1705664152345!5m2!1sen!2som" }
+                ]
+            },
+            {
+                countryAr: "الكويت",
+                countryEn: "Kuwait",
+                branches: [
+                    { nameAr: "فرع الكويت العاصمة", nameEn: "Kuwait City Branch", addressAr: "مدينة الكويت", addressEn: "Kuwait City", mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.1!2d47.9!3d29.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9c83ce455983%3A0xc314841d63640b71!2sKuwait%20City!5e0!3m2!1sen!2skw!4v1705664152345!5m2!1sen!2skw" }
+                ]
+            }
+        ];
+
+        const countrySelector = document.getElementById('countrySelector');
+        const branchesGrid = document.getElementById('branchesGrid');
+        const mainMap = document.getElementById('mainMap');
+        const selectedBranchName = document.getElementById('selectedBranchName');
+        const selectedBranchAddress = document.getElementById('selectedBranchAddress');
+
+        function init() {
+            locationData.forEach((country, index) => {
+                const btn = document.createElement('div');
+                btn.className = `country-btn ${index === 0 ? 'active' : ''}`;
+                btn.textContent = country.countryAr;
+                btn.onclick = () => selectCountry(index);
+                countrySelector.appendChild(btn);
+            });
+
+            selectCountry(0);
+        }
+
+        function selectCountry(index) {
+            document.querySelectorAll('.country-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+
+            const country = locationData[index];
+            branchesGrid.innerHTML = '';
+
+            country.branches.forEach((branch, bIndex) => {
+                const card = document.createElement('div');
+                card.className = `branch-card ${bIndex === 0 ? 'active' : ''}`;
+                card.innerHTML = `
+                    <h4>${branch.nameAr}</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> ${branch.addressAr}</p>
+                `;
+                card.onclick = () => selectBranch(branch, card);
+                branchesGrid.appendChild(card);
+            });
+
+            if (country.branches.length > 0) {
+                selectBranch(country.branches[0], branchesGrid.firstChild);
+            }
+        }
+
+        function selectBranch(branch, element) {
+            document.querySelectorAll('.branch-card').forEach(card => card.classList.remove('active'));
+            element.classList.add('active');
+
+            mainMap.src = branch.mapUrl;
+            selectedBranchName.textContent = branch.nameAr;
+            selectedBranchAddress.textContent = branch.addressAr;
+        }
+
+        init();
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

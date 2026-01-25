@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages & Prices | AL HAKEEM MEDICAL LABS</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .packages-grid-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .package-card-tier {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-card-tier:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--secondary);
+        }
+
+        .tier-header {
+            padding: 40px;
+            text-align: center;
+            background: var(--surface-alt);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tier-header.featured {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .tier-header.featured h3,
+        .tier-header.featured .price {
+            color: white !important;
+        }
+
+        .tier-header h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .tier-header .price {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--text);
+        }
+
+        .tier-header .price span {
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        .tier-body {
+            padding: 40px;
+            flex-grow: 1;
+        }
+
+        .tier-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .tier-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .tier-features li:last-child {
+            border-bottom: none;
+        }
+
+        .tier-features i {
+            color: var(--secondary);
+        }
+
+        .tier-footer {
+            padding: 0 40px 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index-en.html"><img src="assets/newlogo.png" alt="AL HAKEEM MEDICAL LABS"></a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="about-en.html">About</a></li>
+                    <li><a href="services-en.html">Services</a></li>
+                    <li><a href="packages-en.html" class="active">Packages</a></li>
+                    <li><a href="locations-en.html">Locations</a></li>
+                    <li><a href="contact-en.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="packages.html" class="btn btn-outline">Ar</a>
+                <button class="mobile-toggle"><span class="bar"></span><span class="bar"></span><span
+                        class="bar"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <!-- Page Header -->
+        <section class="section"
+            style="background: var(--primary-gradient); color: white; text-align: center; padding: 100px 10%;">
+            <h1 style="color: white; font-size: 3.5rem; margin-bottom: 20px;">Hakeem Wellness Packages</h1>
+            <p style="font-size: 1.3rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">We have designed a range of
+                comprehensive packages to suit your health needs and give you the peace of mind you deserve.</p>
+        </section>
+
+        <!-- Package Tiers -->
+        <section class="section">
+            <div class="packages-grid-tiers">
+
+                <!-- Basic Tier -->
+                <div class="package-card-tier">
+                    <div class="tier-header">
+                        <h3>Basic Package</h3>
+                        <div class="price">119 <span>SAR</span></div>
+                    </div>
+                    <div class="tier-body">
+                        <ul class="tier-features">
+                            <li><i class="fas fa-check-circle"></i> Complete Blood Count (CBC)</li>
+                            <li><i class="fas fa-check-circle"></i> Fasting Blood Sugar</li>
+                            <li><i class="fas fa-check-circle"></i> Total Cholesterol</li>
+                            <li><i class="fas fa-check-circle"></i> Triglycerides</li>
+                            <li><i class="fas fa-check-circle"></i> Kidney Function (Urea)</li>
+                            <li><i class="fas fa-check-circle"></i> Uric Acid (Gout)</li>
+                            <li><i class="fas fa-check-circle"></i> Liver Enzyme (ALT)</li>
+                        </ul>
+                    </div>
+                    <div class="tier-footer">
+                        <button class="btn btn-outline full-width">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Featured Tier (Silver) -->
+                <div class="package-card-tier" style="border-top: 5px solid var(--secondary);">
+                    <div class="tier-header featured">
+                        <span
+                            style="background: var(--secondary); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; display: inline-block;">Most
+                            Popular</span>
+                        <h3>Silver Checkup Package</h3>
+                        <div class="price">299 <span>SAR</span></div>
+                    </div>
+                    <div class="tier-body">
+                        <ul class="tier-features">
+                            <li><i class="fas fa-check-circle"></i> All Basic Package Tests</li>
+                            <li><i class="fas fa-check-circle"></i> Vitamin D (Active)</li>
+                            <li><i class="fas fa-check-circle"></i> Iron Storage (Ferritin)</li>
+                            <li><i class="fas fa-check-circle"></i> Cumulative Sugar (HbA1c)</li>
+                            <li><i class="fas fa-check-circle"></i> HDL & LDL Cholesterol</li>
+                            <li><i class="fas fa-check-circle"></i> Full Liver Functions</li>
+                            <li><i class="fas fa-check-circle"></i> Calcium</li>
+                        </ul>
+                    </div>
+                    <div class="tier-footer">
+                        <button class="btn btn-primary btn-glow full-width">Book Now</button>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Tier (Gold) -->
+                <div class="package-card-tier">
+                    <div class="tier-header">
+                        <h3>Gold Checkup Package</h3>
+                        <div class="price">549 <span>SAR</span></div>
+                    </div>
+                    <div class="tier-body">
+                        <ul class="tier-features">
+                            <li><i class="fas fa-check-circle"></i> All Silver Package Tests</li>
+                            <li><i class="fas fa-check-circle"></i> Vitamin B12</li>
+                            <li><i class="fas fa-check-circle"></i> Thyroid Hormone (TSH)</li>
+                            <li><i class="fas fa-check-circle"></i> Blood Gases</li>
+                            <li><i class="fas fa-check-circle"></i> Minerals (Mg, Na)</li>
+                            <li><i class="fas fa-check-circle"></i> Urine Protein</li>
+                            <li><i class="fas fa-check-circle"></i> Specialized Precision Tests</li>
+                        </ul>
+                    </div>
+                    <div class="tier-footer">
+                        <button class="btn btn-outline full-width">Book Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Home Visit Call to Action -->
+        <section class="section" style="background: var(--surface-alt); text-align: center;">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2>Prefer to have the checkup at home?</h2>
+                <p style="margin: 20px 0 40px;">We offer home visit services for all packages with a specialized medical
+                    team that ensures your comfort and privacy.</p>
+                <button class="btn btn-secondary btn-lg">Request Home Visit</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-col brand-col">
+                <div class="footer-logos">
+                    <img src="assets/newlogo.png" alt="Al Hakeem Labs" style="height: 100px;">
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 400px; line-height: 1.8;">
+                    A data-driven diagnostic and health partner, providing precise and fast care that preserves human
+                    dignity and aligns with Saudi Vision 2030.
+                </p>
+                <div style="margin-top: 30px; font-weight: 700; color: var(--primary);">
+                    Accuracy. Reliability. Speed.
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about-en.html">About us</a></li>
+                    <li><a href="services-en.html">Services</a></li>
+                    <li><a href="packages-en.html">Packages & Prices</a></li>
+                    <li><a href="locations-en.html">Our Branches</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="terms-conditions-en.html">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy-en.html">Privacy Policy</a></li>
+                    <li><a href="patient-rights-en.html">Patient Rights</a></li>
+                    <li><a href="faqs-en.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-phone"
+                            style="color: var(--primary);"></i> +966148482863</li>
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-envelope"
+                            style="color: var(--primary);"></i> info@hakeemlabs.com</li>
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-map-marker-alt"
+                            style="color: var(--primary);"></i> Madinah, Saad bin Khaithama St.</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Working Hours</h4>
+                <p style="font-size: 0.95rem; color: var(--text-muted);">
+                    Sat–Thu: 7:30 AM – 10:00 PM<br>
+                    Friday: Closed
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>© 2020 Al Hakeem Medical Labs</div>
+                <div style="font-size: 0.85rem; opacity: 0.7;">IT Powered by Rabicana</div>
+            </div>
+        </div>
+
+        <!-- Floating Actions -->
+        <div class="floating-actions">
+            <a href="https://wa.me/966559160005" class="whatsapp-btn" target="_blank" title="Contact on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="btn-tooltip">Chat with us</span>
+            </a>
+            <div class="scroll-buttons">
+                <button id="scrollToTop" class="scroll-btn" title="Scroll to Top">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

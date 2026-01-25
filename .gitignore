@@ -1,0 +1,13 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Excel files (if you don't want to share data source)
+*.xlsx
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local settings
+.env
