@@ -270,7 +270,23 @@ nav a.active::before {
 
 .is-home #header:not(.scrolled) .logo img {
     height: 100px;
-    /* Optional: filter: brightness(0) invert(1); if logo is dark */
+}
+
+/* Logo Toggle Logic */
+.logo .logo-light {
+    display: none;
+}
+
+.logo .logo-dark {
+    display: block;
+}
+
+.is-home #header:not(.scrolled) .logo .logo-light {
+    display: block;
+}
+
+.is-home #header:not(.scrolled) .logo .logo-dark {
+    display: none;
 }
 
 .is-home #header:not(.scrolled) nav a {
