@@ -22,6 +22,7 @@
                     <li><a href="about.html">من نحن</a></li>
                     <li><a href="services.html" class="active">خدماتنا</a></li>
                     <li><a href="packages.html">الباقات</a></li>
+                    <li><a href="individual-tests.html">التحاليل الفردية</a></li>
                     <li><a href="locations.html">فروعنا</a></li>
                     <li><a href="contact.html">اتصل بنا</a></li>
                 </ul>
@@ -36,18 +37,98 @@
 
     <main style="padding-top: 100px;">
         <!-- Page Header -->
-        <section class="section" style="background: var(--surface-alt); text-align: center; padding: 100px 10%;">
+        <section class="hero-section"
+            style="background: var(--surface-alt); text-align: center; padding: 100px 10% 60px;">
             <span style="color: var(--primary); font-weight: 800; letter-spacing: 2px;">نطاق خدماتنا</span>
             <h1 style="font-size: 3.5rem; margin-top: 10px;">حلول تشخيصية متكاملة</h1>
-            <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 20px auto;">أكثر من 1200
-                فحص طبي تغطي كافة التخصصات، مدعومة بأحدث التقنيات وبإشراف نخبة من الاستشاريين.</p>
+            <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 20px auto;">
+                نقدم منظومة متكاملة من الخدمات الصحية، بدءاً من الفحوصات الفردية والباقات الشاملة، وحتى خدمات الزيارة
+                المنزلية وأحدث تقنيات تحليل الجسم.
+            </p>
+        </section>
+
+        <!-- Main Services Pillars (New) -->
+        <section class="section" style="padding-top: 0;">
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px;">
+
+                <!-- Home Visit -->
+                <div class="feature-card"
+                    style="background: var(--primary-dark); color: white; border: none; padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="font-size: 3rem; color: var(--secondary); margin-bottom: 25px;"><i
+                                class="fas fa-home"></i></div>
+                        <h3 style="color: white; font-size: 2rem; margin-bottom: 15px;">الزيارات المنزلية</h3>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6;">
+                            نصل إليك أينما كنت. خدمة سحب عينات احترافية في راحة منزلك، تضمن أعلى معايير السلامة
+                            والخصوصية.
+                        </p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <a href="contact.html" class="btn btn-secondary">احجز موعد زيارة</a>
+                    </div>
+                </div>
+
+                <!-- Packages -->
+                <div class="feature-card"
+                    style="background: var(--surface-alt); border: 2px solid var(--primary-light); padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="font-size: 3rem; color: var(--primary); margin-bottom: 25px;"><i
+                                class="fas fa-box-open"></i></div>
+                        <h3 style="font-size: 2rem; margin-bottom: 15px;">الباقات الشاملة</h3>
+                        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted);">
+                            مجموعة مختارة بعناية من الفحوصات في باقات اقتصادية تغطي كافة الاحتياجات الصحية والوقائية
+                            والعلاجية.
+                        </p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <a href="packages.html" class="btn btn-primary">استعرض الباقات</a>
+                    </div>
+                </div>
+
+                <!-- In-Body -->
+                <div class="feature-card"
+                    style="background: white; border: 1px solid #eee; padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div style="font-size: 3rem; color: var(--primary); margin-bottom: 25px;"><i
+                                    class="fas fa-child"></i></div>
+                            <span
+                                style="background: var(--secondary-light); color: var(--secondary-dark); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">جديد</span>
+                        </div>
+                        <h3 style="font-size: 2rem; margin-bottom: 15px;">تحليل مكونات الجسم (In-Body)</h3>
+                        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted);">
+                            تقنية متقدمة لتحليل تكوين الجسم (الدهون، العضلات، الماء) بدقة عالية.
+                            <br><span
+                                style="font-size: 0.9rem; color: var(--primary); margin-top: 10px; display: block;">*
+                                متوفر حالياً في فرع الرياض، وقريباً في باقي الفروع.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Individual Tests -->
+                <div class="feature-card"
+                    style="background: white; border: 1px solid #eee; padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="font-size: 3rem; color: var(--primary); margin-bottom: 25px;"><i
+                                class="fas fa-vial"></i></div>
+                        <h3 style="font-size: 2rem; margin-bottom: 15px;">التحاليل الفردية</h3>
+                        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted);">
+                            أكثر من 1200 فحص مخبري تغطي كافة التخصصات الدقيقة بأحدث التقنيات العالمية.
+                        </p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <a href="individual-tests.html" class="btn btn-outline">تصفح التخصصات</a>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <!-- Departments Grid -->
-        <section class="section">
+        <section class="section" id="specialties">
             <div class="section-title">
-                <span>الأقسام التخصصية</span>
-                <h2>تخصصاتنا المخبرية</h2>
+                <span>التخصصات الدقيقة</span>
+                <h2>تخصصات التحاليل المخبرية</h2>
             </div>
             <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                 <div class="feature-card">

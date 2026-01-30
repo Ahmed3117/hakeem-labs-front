@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, revealOptions);
 
     // Targets for reveal
-    const revealTargets = document.querySelectorAll('section, .stat-item, .package-card, .feature-card, .floating-card, .reveal');
+    // Targets for reveal (skip those with no-reveal class)
+    const revealTargets = document.querySelectorAll('section:not(.no-reveal), .stat-item, .package-card, .feature-card, .floating-card, .reveal');
     revealTargets.forEach(target => {
         if (!target.classList.contains('reveal')) {
             target.classList.add('reveal');
@@ -139,6 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const btn = e.target.closest('.btn');
         const searchItem = e.target.closest('.search-item');
+
+        // Skip if it's the specific tests checkout button or inside cart bar
+        if (btn && (btn.id === 'checkoutBtn' || btn.closest('#cartBar'))) return;
+
         if (!btn && !searchItem) return;
 
         const text = btn ? btn.textContent : '';
@@ -343,44 +348,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 8. Scroll to Top/Bottom Logic
+    // 8. Scroll to Top/Bottom Logic (Safeguarded)
     const scrollTopBtn = document.getElementById('scrollToTop');
     const scrollBottomBtn = document.getElementById('scrollToBottom');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollTopBtn.classList.add('visible');
-        } else {
-            scrollTopBtn.classList.remove('visible');
+        if (scrollTopBtn) {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
         }
 
         // Hide "Bottom" button when reaching the footer
-        const scrollHeight = document.documentElement.scrollHeight;
-        const windowHeight = window.innerHeight;
-        const scrollPosition = window.scrollY + windowHeight;
+        if (scrollBottomBtn) {
+            const scrollHeight = document.documentElement.scrollHeight;
+            const windowHeight = window.innerHeight;
+            const scrollPosition = window.scrollY + windowHeight;
 
-        if (scrollPosition > scrollHeight - 100) {
-            scrollBottomBtn.style.opacity = '0';
-            scrollBottomBtn.style.pointerEvents = 'none';
-        } else {
-            scrollBottomBtn.style.opacity = '0.8';
-            scrollBottomBtn.style.pointerEvents = 'auto';
+            if (scrollPosition > scrollHeight - 100) {
+                scrollBottomBtn.style.opacity = '0';
+                scrollBottomBtn.style.pointerEvents = 'none';
+            } else {
+                scrollBottomBtn.style.opacity = '0.8';
+                scrollBottomBtn.style.pointerEvents = 'auto';
+            }
         }
     });
 
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 
-    scrollBottomBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: 'smooth'
+    if (scrollBottomBtn) {
+        scrollBottomBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 
     // 9. Animated Counters for Stats
     const counters = document.querySelectorAll('.counter');

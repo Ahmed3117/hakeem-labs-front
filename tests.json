@@ -1,0 +1,442 @@
+{
+    "categories": [
+        {
+            "id": "vitamins",
+            "name": {
+                "ar": "الفيتامينات والمعادن",
+                "en": "Vitamins & Minerals"
+            },
+            "tests": [
+                {
+                    "code": "VITD",
+                    "name": {
+                        "ar": "فيتامين د",
+                        "en": "Vitamin D"
+                    },
+                    "price": 99
+                },
+                {
+                    "code": "B12",
+                    "name": {
+                        "ar": "فيتامين ب12",
+                        "en": "Vitamin B12"
+                    },
+                    "price": 80
+                },
+                {
+                    "code": "FERRITIN",
+                    "name": {
+                        "ar": "مخزون الحديد",
+                        "en": "Ferritin"
+                    },
+                    "price": 60
+                },
+                {
+                    "code": "IRON",
+                    "name": {
+                        "ar": "الحديد",
+                        "en": "Iron"
+                    },
+                    "price": 40
+                },
+                {
+                    "code": "CALCIUM",
+                    "name": {
+                        "ar": "الكالسيوم",
+                        "en": "Calcium"
+                    },
+                    "price": 30
+                },
+                {
+                    "code": "MAGNESIUM",
+                    "name": {
+                        "ar": "المغنيسيوم",
+                        "en": "Magnesium"
+                    },
+                    "price": 40
+                },
+                {
+                    "code": "ZINC",
+                    "name": {
+                        "ar": "الزنك",
+                        "en": "Zinc"
+                    },
+                    "price": 70
+                },
+                {
+                    "code": "FOLIC",
+                    "name": {
+                        "ar": "حمض الفوليك",
+                        "en": "Folic Acid"
+                    },
+                    "price": 80
+                }
+            ]
+        },
+        {
+            "id": "hematology",
+            "name": {
+                "ar": "أمراض الدم",
+                "en": "Hematology"
+            },
+            "tests": [
+                {
+                    "code": "CBC",
+                    "name": {
+                        "ar": "صورة الدم الكاملة",
+                        "en": "CBC"
+                    },
+                    "price": 50
+                },
+                {
+                    "code": "ESR",
+                    "name": {
+                        "ar": "سرعة الترسيب",
+                        "en": "ESR"
+                    },
+                    "price": 30
+                },
+                {
+                    "code": "PT",
+                    "name": {
+                        "ar": "سيولة الدم PT",
+                        "en": "PT/INR"
+                    },
+                    "price": 40
+                },
+                {
+                    "code": "PTT",
+                    "name": {
+                        "ar": "سيولة الدم PTT",
+                        "en": "PTT"
+                    },
+                    "price": 40
+                },
+                {
+                    "code": "RETIC",
+                    "name": {
+                        "ar": "الخلايا الشبكية",
+                        "en": "Reticulocytes"
+                    },
+                    "price": 40
+                },
+                {
+                    "code": "BLOODGROUP",
+                    "name": {
+                        "ar": "فصيلة الدم",
+                        "en": "Blood Group"
+                    },
+                    "price": 30
+                }
+            ]
+        },
+        {
+            "id": "hormones",
+            "name": {
+                "ar": "الهرمونات والغدد",
+                "en": "Hormones & Endocrinology"
+            },
+            "tests": [
+                {
+                    "code": "TSH",
+                    "name": {
+                        "ar": "هرمون الغدة الدرقية TSH",
+                        "en": "TSH"
+                    },
+                    "price": 60
+                },
+                {
+                    "code": "FT3",
+                    "name": {
+                        "ar": "هرمون FT3",
+                        "en": "Free T3"
+                    },
+                    "price": 60
+                },
+                {
+                    "code": "FT4",
+                    "name": {
+                        "ar": "هرمون FT4",
+                        "en": "Free T4"
+                    },
+                    "price": 60
+                },
+                {
+                    "code": "INSULIN",
+                    "name": {
+                        "ar": "الأنسولين",
+                        "en": "Insulin"
+                    },
+                    "price": 80
+                },
+                {
+                    "code": "CORTISOL",
+                    "name": {
+                        "ar": "الكورتيزول",
+                        "en": "Cortisol"
+                    },
+                    "price": 70
+                },
+                {
+                    "code": "TESTO",
+                    "name": {
+                        "ar": "تستوستيرون",
+                        "en": "Testosterone"
+                    },
+                    "price": 80
+                },
+                {
+                    "code": "PROLAC",
+                    "name": {
+                        "ar": "هرمون الحليب",
+                        "en": "Prolactin"
+                    },
+                    "price": 70
+                },
+                {
+                    "code": "FSH",
+                    "name": {
+                        "ar": "هرمون FSH",
+                        "en": "FSH"
+                    },
+                    "price": 70
+                },
+                {
+                    "code": "LH",
+                    "name": {
+                        "ar": "هرمون LH",
+                        "en": "LH"
+                    },
+                    "price": 70
+                },
+                {
+                    "code": "AMH",
+                    "name": {
+                        "ar": "مخزون المبيض",
+                        "en": "AMH"
+                    },
+                    "price": 250
+                },
+                {
+                    "code": "BHCG",
+                    "name": {
+                        "ar": "هرمون الحمل الرقمي",
+                        "en": "B-HCG (Digital)"
+                    },
+                    "price": 90
+                }
+            ]
+        },
+        {
+            "id": "biochemistry",
+            "name": {
+                "ar": "الكيمياء الحيوية",
+                "en": "Clinical Biochemistry"
+            },
+            "tests": [
+                {
+                    "code": "FBS",
+                    "name": {
+                        "ar": "سكر صائم",
+                        "en": "FBS (Fasting Sugar)"
+                    },
+                    "price": 25
+                },
+                {
+                    "code": "HBA1C",
+                    "name": {
+                        "ar": "السكر التراكمي",
+                        "en": "HbA1c"
+                    },
+                    "price": 60
+                },
+                {
+                    "code": "LIPID",
+                    "name": {
+                        "ar": "دهون الدم الكاملة",
+                        "en": "Lipid Profile"
+                    },
+                    "price": 90
+                },
+                {
+                    "code": "CHOLESTEROL",
+                    "name": {
+                        "ar": "كوليسترول كلي",
+                        "en": "Cholesterol"
+                    },
+                    "price": 30
+                },
+                {
+                    "code": "TRIG",
+                    "name": {
+                        "ar": "دهون ثلاثية",
+                        "en": "Triglycerides"
+                    },
+                    "price": 30
+                },
+                {
+                    "code": "KIDNEY",
+                    "name": {
+                        "ar": "وظائف كلى كاملة",
+                        "en": "Kidney Function Profile"
+                    },
+                    "price": 80
+                },
+                {
+                    "code": "CREAT",
+                    "name": {
+                        "ar": "كرياتينين",
+                        "en": "Creatinine"
+                    },
+                    "price": 30
+                },
+                {
+                    "code": "UREA",
+                    "name": {
+                        "ar": "يوريا",
+                        "en": "Urea"
+                    },
+                    "price": 30
+                },
+                {
+                    "code": "LIVER",
+                    "name": {
+                        "ar": "وظائف كبد كاملة",
+                        "en": "Liver Function Profile"
+                    },
+                    "price": 90
+                },
+                {
+                    "code": "ALT",
+                    "name": {
+                        "ar": "إنزيم كبد ALT",
+                        "en": "ALT"
+                    },
+                    "price": 30
+                },
+                {
+                    "code": "AST",
+                    "name": {
+                        "ar": "إنزيم كبد AST",
+                        "en": "AST"
+                    },
+                    "price": 30
+                },
+                {
+                    "code": "URIC",
+                    "name": {
+                        "ar": "حمض اليوريك (النقرس)",
+                        "en": "Uric Acid"
+                    },
+                    "price": 30
+                }
+            ]
+        },
+        {
+            "id": "tumor",
+            "name": {
+                "ar": "دلالات الأورام",
+                "en": "Tumor Markers"
+            },
+            "tests": [
+                {
+                    "code": "PSA",
+                    "name": {
+                        "ar": "دلالات أورام البروستاتا",
+                        "en": "PSA Total"
+                    },
+                    "price": 80
+                },
+                {
+                    "code": "CEA",
+                    "name": {
+                        "ar": "دلالات أورام القولون",
+                        "en": "CEA"
+                    },
+                    "price": 90
+                },
+                {
+                    "code": "CA125",
+                    "name": {
+                        "ar": "دلالات أورام المبيض",
+                        "en": "CA 125"
+                    },
+                    "price": 100
+                },
+                {
+                    "code": "CA153",
+                    "name": {
+                        "ar": "دلالات أورام الثدي",
+                        "en": "CA 15-3"
+                    },
+                    "price": 100
+                },
+                {
+                    "code": "CA199",
+                    "name": {
+                        "ar": "دلالات أورام البنكرياس",
+                        "en": "CA 19-9"
+                    },
+                    "price": 100
+                },
+                {
+                    "code": "AFP",
+                    "name": {
+                        "ar": "ألفا فيتو بروتين",
+                        "en": "AFP"
+                    },
+                    "price": 90
+                }
+            ]
+        },
+        {
+            "id": "infection",
+            "name": {
+                "ar": "الأمراض المعدية",
+                "en": "Infectious Diseases"
+            },
+            "tests": [
+                {
+                    "code": "HBSAG",
+                    "name": {
+                        "ar": "التهاب الكبد ب",
+                        "en": "HBsAg"
+                    },
+                    "price": 60
+                },
+                {
+                    "code": "HCV",
+                    "name": {
+                        "ar": "التهاب الكبد سي",
+                        "en": "HCV Ab"
+                    },
+                    "price": 70
+                },
+                {
+                    "code": "HIV",
+                    "name": {
+                        "ar": "ناقص المناعة HIV",
+                        "en": "HIV Combo"
+                    },
+                    "price": 80
+                },
+                {
+                    "code": "HPYLORI_STOOL",
+                    "name": {
+                        "ar": "جرثومة المعدة (براز)",
+                        "en": "H. Pylori Ag (Stool)"
+                    },
+                    "price": 70
+                },
+                {
+                    "code": "HPYLORI_BREATH",
+                    "name": {
+                        "ar": "جرثومة المعدة (نفس)",
+                        "en": "Urea Breath Test"
+                    },
+                    "price": 250
+                }
+            ]
+        }
+    ]
+}

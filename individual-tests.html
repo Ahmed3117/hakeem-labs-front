@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التحاليل الفردية | مختبرات الحكيم الطبية</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Sticky Logic for Individual Tests Page */
+        .search-container {
+            position: sticky;
+            top: 108px;
+            /* Docks perfectly under header (80px + padding) */
+            z-index: 100;
+            background: #ffffff;
+            padding: 25px 0;
+            border-bottom: 2px solid var(--primary-light);
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+        }
+
+        @media (max-width: 991px) {
+            .search-container {
+                top: 70px;
+                /* Mobile header is shorter */
+            }
+        }
+
+        .search-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-size: 1.3rem;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 20px 70px 20px 30px;
+            border-radius: 50px;
+            border: 2px solid var(--border);
+            font-size: 1.15rem;
+            font-family: inherit;
+            transition: var(--transition);
+            background: var(--surface-alt);
+            position: relative;
+            z-index: 1;
+            color: var(--text);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: #fff;
+            box-shadow: 0 0 0 5px rgba(0, 74, 173, 0.1);
+        }
+
+        /* Close Booking Modal X button */
+        .close-modal-fixed {
+            position: absolute;
+            top: 30px;
+            inset-inline-end: 30px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .close-modal-fixed:hover {
+            color: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .category-filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .cat-btn {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 700;
+            color: var(--text-muted);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .cat-btn:hover,
+        .cat-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .tests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .test-card {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 20px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            opacity: 0;
+            transform: translateY(25px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .test-card.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .test-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .test-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .test-card:hover::before {
+            opacity: 1;
+        }
+
+        .test-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .test-code {
+            font-size: 0.85rem;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 6px 12px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .test-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .test-price {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .test-price small {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-inline-start: 4px;
+        }
+
+        .add-btn {
+            background: var(--surface-alt);
+            color: var(--primary);
+            border: 2px solid transparent;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .add-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .add-btn.added {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 174, 239, 0.3);
+        }
+
+        /* Cart Sticky Bar */
+        .cart-bar {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(150%);
+            background: var(--primary-dark);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            z-index: 2000;
+            transition: var(--transition);
+            width: 90%;
+            max-width: 700px;
+            justify-content: space-between;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cart-bar.visible {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .cart-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-count {
+            background: var(--secondary);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1rem;
+            box-shadow: 0 0 15px rgba(0, 174, 239, 0.5);
+        }
+
+        /* Modal Summary */
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .summary-total {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid var(--primary-light);
+            display: flex;
+            justify-content: space-between;
+            font-weight: 900;
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/newlogo.png" alt="مختبرات الحكيم الطبية">
+                </a>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="packages.html">الباقات</a></li>
+                    <li><a href="individual-tests.html" class="active">التحاليل الفردية</a></li>
+                    <li><a href="locations.html">فروعنا</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="header-btns">
+                    <a href="individual-tests-en.html" class="btn btn-outline" style="padding: 10px 18px;">En</a>
+                    <button class="btn btn-primary btn-sm"><i class="fas fa-file-medical"></i> <span
+                            class="hide-mobile">النتائج</span></button>
+                </div>
+                <!-- Mobile Toggle -->
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="assets/newlogo.png" alt="مختبرات الحكيم الطبية">
+            </div>
+            <button class="close-mobile-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="services.html">خدماتنا</a></li>
+            <li><a href="packages.html">الباقات</a></li>
+            <li><a href="individual-tests.html" class="active">التحاليل الفردية</a></li>
+            <li><a href="locations.html">فروعنا</a></li>
+            <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+    </div>
+
+    <main style="padding-top: 100px;">
+        <!-- Page Header -->
+        <section class="section no-reveal"
+            style="background: var(--surface-alt); text-align: center; padding: 100px 10% 60px;">
+            <div class="section-title" style="margin-bottom: 0;">
+                <span>قائمة فحص النخبة</span>
+                <h1 style="font-size: 3.5rem; margin-bottom: 15px; color: var(--primary);">التحاليل الفردية</h1>
+                <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto;">
+                    استعرض أكثر من 1200 نوع من الفحوصات المخبرية الدقيقة. أضف التحاليل لسلتك وسنقوم بحفظ طلبك وتنسيق
+                    الموعد معك.
+                </p>
+            </div>
+        </section>
+
+        <!-- Search & Filter -->
+        <div class="search-container">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div class="search-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="searchInput" class="search-input"
+                        placeholder="ابحث عن اسم الفحص أو الرمز (مثل: VITD)...">
+                </div>
+                <div class="category-filters" id="categoryFilters">
+                    <button class="cat-btn active" data-cat="all">الكل</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tests Booking Modal -->
+        <div id="testBookingModal" class="modal-overlay">
+            <div class="modal-card">
+                <span class="close-modal-fixed" id="closeTestModal">
+                    <i class="fas fa-times"></i>
+                </span>
+                <div class="section-title" style="text-align: start; margin-bottom: 35px;">
+                    <span style="letter-spacing: 2px;">تأكيد الحجز</span>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 15px;">بيانات التواصل</h2>
+                    <p>يرجى تزويدنا ببياناتك لنتمكن من حفظ طلبياتك والمتابعة معك لتأكيد الموعد.</p>
+                </div>
+
+                <div id="selectedTestsSummary"
+                    style="margin-bottom: 30px; padding: 25px; background: var(--surface-alt); border-radius: var(--radius-md); max-height: 250px; overflow-y: auto; border: 1px solid var(--border);">
+                    <!-- Selected tests will be listed here dynamically -->
+                </div>
+
+                <form id="testBookingForm" class="booking-form">
+                    <div class="form-group full-width">
+                        <label style="font-weight: 800; margin-bottom: 10px; display: block;">الاسم الكامل</label>
+                        <input type="text" id="patientName" placeholder="أدخل اسمك الكريم" required
+                            style="width: 100%; padding: 18px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-alt);">
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label style="font-weight: 800; margin-bottom: 10px; display: block;">رقم الجوال</label>
+                        <input type="tel" id="patientPhone" placeholder="05xxxxxxxx" required
+                            style="width: 100%; padding: 18px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-alt);">
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label style="font-weight: 800; margin-bottom: 10px; display: block;">المدينة</label>
+                        <select id="patientCity"
+                            style="width: 100%; padding: 18px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-alt); appearance: none;">
+                            <option>المدينة المنورة</option>
+                            <option>الرياض</option>
+                            <option>جدة</option>
+                            <option>الدمام</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg full-width"
+                        style="margin-top: 30px; padding: 22px;">إرسال طلب الحجز</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tests Grid -->
+        <section class="section no-reveal" style="padding-top: 0; min-height: 600px;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <div id="testsGrid" class="tests-grid">
+                    <!-- Tests will be loaded here -->
+                    <div style="grid-column: 1/-1; text-align: center; padding: 100px;">
+                        <i class="fas fa-spinner fa-spin fa-3x" style="color: var(--primary);"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sticky Bar -->
+    <div id="cartBar" class="cart-bar">
+        <div class="cart-info">
+            <div class="cart-count" id="cartCount">0</div>
+            <div style="display: flex; flex-direction: column; line-height: 1.2;">
+                <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 500;">إجمالي الفحوصات</span>
+                <span style="font-weight: 900; font-size: 1.4rem; color: #fff;" id="cartTotal">0 ريال</span>
+            </div>
+        </div>
+        <button id="checkoutBtn" class="btn btn-secondary"
+            style="border-radius: 50px; padding: 15px 35px; font-weight: 800; font-size: 1.05rem;">
+            تأكيد الحجز <i class="fas fa-arrow-left" style="margin-right: 12px;"></i>
+        </button>
+    </div>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-col brand-col">
+                <div class="footer-logos">
+                    <img src="assets/newlogo.png" alt="مختبرات الحكيم" style="height: 100px;">
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 400px; line-height: 1.8;">
+                    شريك تشخيصي وصحي قائم على البيانات، يقدم رعاية دقيقة وسريعة تحفظ كرامة الإنسان وتنسجم مع رؤية
+                    المملكة 2030.
+                </p>
+                <div style="margin-top: 30px; font-weight: 700; color: var(--primary);">
+                    دقة. موثوقية. سرعة.
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">عن المختبر</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="packages.html">الباقات والأسعار</a></li>
+                    <li><a href="locations.html">فروعنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>سياساتنا</h4>
+                <ul class="footer-links">
+                    <li><a href="terms-conditions.html">الشروط والأحكام</a></li>
+                    <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                    <li><a href="patient-rights.html">حقوق ومسؤوليات المريض</a></li>
+                    <li><a href="faqs.html">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <ul class="footer-links">
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-phone"
+                            style="color: var(--primary);"></i> +966 9200 35397</li>
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-envelope"
+                            style="color: var(--primary);"></i> info@hakeemlabs.com</li>
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-map-marker-alt"
+                            style="color: var(--primary);"></i>الرياض : حي السليمانية، طريق الملك عبد العزيز الفرعي</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ساعات العمل</h4>
+                <p style="font-size: 0.95rem; color: var(--text-muted);">
+                    السبت–الخميس: 7:30 ص – 10:00 م<br>
+                    الجمعة: مغلق
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>© 2020 مختبرات الحكيم الطبية - AL HAKEEM MEDICAL LABS</div>
+                <div style="font-size: 0.85rem; opacity: 0.7;">تقنية المعلومات بواسطة Rabicana</div>
+            </div>
+        </div>
+
+        <div class="floating-actions">
+            <a href="https://wa.me/966559160005" class="whatsapp-btn" target="_blank" title="تواصل عبر الواتساب">
+                <i class="fab fa-whatsapp"></i>
+                <span class="btn-tooltip">تحدث معنا</span>
+            </a>
+            <div class="scroll-buttons">
+                <button id="scrollToTop" class="scroll-btn" title="العودة للأعلى">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="tests-loader.js"></script>
+</body>
+
+</html>

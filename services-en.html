@@ -23,6 +23,7 @@
                     <li><a href="about-en.html">About</a></li>
                     <li><a href="services-en.html" class="active">Services</a></li>
                     <li><a href="packages-en.html">Packages</a></li>
+                    <li><a href="individual-tests-en.html">Individual Tests</a></li>
                     <li><a href="locations-en.html">Locations</a></li>
                     <li><a href="contact-en.html">Contact</a></li>
                 </ul>
@@ -37,16 +38,97 @@
 
     <main style="padding-top: 100px;">
         <!-- Page Header -->
-        <section class="section" style="background: var(--surface-alt); text-align: center; padding: 100px 10%;">
+        <section class="hero-section"
+            style="background: var(--surface-alt); text-align: center; padding: 100px 10% 60px;">
             <span style="color: var(--primary); font-weight: 800; letter-spacing: 2px;">SERVICE SCOPE</span>
             <h1 style="font-size: 3.5rem; margin-top: 10px;">Comprehensive Diagnostic Solutions</h1>
-            <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 20px auto;">More than 1200
-                medical tests covering all specialties, supported by the latest technology and supervised by top
-                consultants.</p>
+            <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 20px auto;">
+                We provide a comprehensive ecosystem of health services, ranging from individual tests and comprehensive
+                packages to home visit services and the latest body composition analysis technologies.
+            </p>
+        </section>
+
+        <!-- Main Services Pillars (New) -->
+        <section class="section" style="padding-top: 0;">
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px;">
+
+                <!-- Home Visit -->
+                <div class="feature-card"
+                    style="background: var(--primary-dark); color: white; border: none; padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="font-size: 3rem; color: var(--secondary); margin-bottom: 25px;"><i
+                                class="fas fa-home"></i></div>
+                        <h3 style="color: white; font-size: 2rem; margin-bottom: 15px;">Home Visit Services</h3>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6;">
+                            We come to you wherever you are. Professional sample collection service in the comfort of
+                            your
+                            home, ensuring the highest standards of safety and privacy.
+                        </p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <a href="contact-en.html" class="btn btn-secondary">Book a Home Visit</a>
+                    </div>
+                </div>
+
+                <!-- Packages -->
+                <div class="feature-card"
+                    style="background: var(--surface-alt); border: 2px solid var(--primary-light); padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="font-size: 3rem; color: var(--primary); margin-bottom: 25px;"><i
+                                class="fas fa-box-open"></i></div>
+                        <h3 style="font-size: 2rem; margin-bottom: 15px;">Comprehensive Packages</h3>
+                        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted);">
+                            A carefully selected group of tests in economical packages covering all health, preventive,
+                            and therapeutic needs.
+                        </p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <a href="packages-en.html" class="btn btn-primary">Explore Packages</a>
+                    </div>
+                </div>
+
+                <!-- In-Body -->
+                <div class="feature-card"
+                    style="background: white; border: 1px solid #eee; padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div style="font-size: 3rem; color: var(--primary); margin-bottom: 25px;"><i
+                                    class="fas fa-child"></i></div>
+                            <span
+                                style="background: var(--secondary-light); color: var(--secondary-dark); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">New</span>
+                        </div>
+                        <h3 style="font-size: 2rem; margin-bottom: 15px;">Body Composition Analysis (In-Body)</h3>
+                        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted);">
+                            Advanced technology for analyzing body composition (fat, muscle, water) with high accuracy.
+                            <br><span
+                                style="font-size: 0.9rem; color: var(--primary); margin-top: 10px; display: block;">*
+                                Currently available in Riyadh branch, coming soon to other branches.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Individual Tests -->
+                <div class="feature-card"
+                    style="background: white; border: 1px solid #eee; padding: 40px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="font-size: 3rem; color: var(--primary); margin-bottom: 25px;"><i
+                                class="fas fa-vial"></i></div>
+                        <h3 style="font-size: 2rem; margin-bottom: 15px;">Individual Tests</h3>
+                        <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-muted);">
+                            More than 1200 laboratory tests covering all precise specialties with the latest global
+                            tchnologies.
+                        </p>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <a href="individual-tests-en.html" class="btn btn-outline">Browse Specialties</a>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <!-- Departments Grid -->
-        <section class="section">
+        <section class="section" id="specialties">
             <div class="section-title">
                 <span>Specialized Departments</span>
                 <h2>Our Laboratory Specialties</h2>
