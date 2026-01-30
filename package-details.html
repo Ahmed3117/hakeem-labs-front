@@ -4,13 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية | مختبرات الحكيم الطبية</title>
+    <title>تفاصيل الباقة | مختبرات الحكيم الطبية</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --pkg-color: var(--primary);
+        }
+
+        body {
+            background-color: var(--surface-alt);
+        }
+
+        /* Responsive Fixes for Details Page */
+        @media (max-width: 991px) {
+            .hero-content-wrapper {
+                flex-direction: column;
+                text-align: center !important;
+                padding-top: 60px;
+            }
+
+            .hero-text-side {
+                text-align: center !important;
+            }
+
+            .details-body-wrapper>div {
+                grid-template-columns: 1fr !important;
+            }
+
+            .hero-card-side {
+                flex: none !important;
+                width: 100% !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
+    <!-- Header -->
     <header id="header">
         <div class="header-container">
             <div class="logo">
@@ -21,62 +52,48 @@
                     <li><a href="index.html">الرئيسية</a></li>
                     <li><a href="about.html">من نحن</a></li>
                     <li><a href="services.html">خدماتنا</a></li>
-                    <li><a href="packages.html">الباقات</a></li>
+                    <li><a href="packages.html" class="active">الباقات</a></li>
                     <li><a href="locations.html">فروعنا</a></li>
                     <li><a href="contact.html">اتصل بنا</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="privacy-policy-en.html" class="btn btn-outline">En</a>
+                <a href="package-details-en.html" class="btn btn-outline" id="langSwitch">En</a>
                 <button class="mobile-toggle"><span class="bar"></span><span class="bar"></span><span
                         class="bar"></span></button>
             </div>
         </div>
     </header>
 
-    <main style="padding-top: 100px;">
-        <!-- Page Header -->
-        <section class="section"
-            style="background: var(--primary-gradient); color: white; text-align: center; padding: 80px 10%;">
-            <h1 style="color: white; font-size: 3rem; margin-bottom: 20px;">سياسة الخصوصية</h1>
-            <p style="font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">نحن نولي أهمية قصوى لخصوصية
-                بياناتكم الصحية والشخصية.</p>
-        </section>
-
-        <section class="section">
-            <div class="container" style="max-width: 1000px; margin: 0 auto; line-height: 1.8;">
-                <div class="legal-content">
-                    <h2 style="color: var(--primary); margin-bottom: 20px;">1. جمع المعلومات</h2>
-                    <p>نقوم بجمع البيانات الشخصية والطبية الضرورية لتقديم خدماتنا، بما في ذلك الاسم، بيانات التواصل،
-                        والتاريخ الطبي ذو الصلة بالتحاليل المطلوبة.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">2. استخدام المعلومات</h2>
-                    <p>تُستخدم بياناتكم حصراً لإجراء التحاليل المخبرية، إصدار النتائج، التواصل معكم بشأن المواعيد،
-                        وتحسين جودة خدماتنا.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">3. سرية البيانات</h2>
-                    <p>نلتزم بأعلى معايير السرية الطبية. لا يتم الكشف عن نتائجكم أو بياناتكم لأي طرف ثالث دون موافقة
-                        خطية منكم، باستثناء الجهات الرسمية المخولة قانوناً.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">4. حماية البيانات</h2>
-                    <p>نطبق إجراءات أمنية تقنية وإدارية متقدمة لحماية بياناتكم من الوصول غير المصرح به، التغيير، أو
-                        الإتلاف.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">5. الوصول إلى النتائج</h2>
-                    <p>يمكنكم الحصول على نتائجكم عبر موقعنا الإلكتروني الآمن، أو عبر رسائل نصية، أو استلامها شخصياً من
-                        فروعنا بعد التحقق من الهوية.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">6. ملفات تعريف الارتباط
-                        (Cookies)</h2>
-                    <p>قد يستخدم موقعنا ملفات تعريف الارتباط لتحسين تجربة المستخدم وتحليل حركة المرور على الموقع ببيانات
-                        مجهولة الهوية.</p>
-
-                    <h2 style="color: var(--primary); margin-top: 40px; margin-bottom: 20px;">7. التحديثات</h2>
-                    <p>نحتفظ بالحق في تحديث سياسة الخصوصية هذه بما يتوافق مع الأنظمة الجديدة لحماية البيانات في المملكة.
-                    </p>
-                </div>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="assets/newlogo.png" alt="مختبرات الحكيم الطبية">
             </div>
-        </section>
+            <button class="close-mobile-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">عن الحكيم</a></li>
+            <li><a href="services.html">خدماتنا</a></li>
+            <li><a href="packages.html" class="active">الباقات</a></li>
+            <li><a href="locations.html">مواقعنا</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="package-details-en.html" class="btn btn-outline lang-switch-mobile"
+                style="width: 100%; margin-bottom: 10px;">English Version</a>
+            <button class="btn btn-primary btn-lg" style="width: 100%;">حجز موعد الآن</button>
+        </div>
+    </div>
+
+    <main id="packageDetailsContainer" style="padding-top: 80px;">
+        <!-- Will be populated by packages-loader.js -->
+        <div style="padding: 200px 0; text-align: center;">
+            <i class="fas fa-spinner fa-spin fa-3x" style="color: var(--primary);"></i>
+            <p style="margin-top: 20px;">جاري تحميل تفاصيل الباقة...</p>
+        </div>
     </main>
 
     <footer>
@@ -137,7 +154,34 @@
                 <div style="font-size: 0.85rem; opacity: 0.7;">تقنية المعلومات بواسطة Rabicana</div>
             </div>
         </div>
+
+        <!-- Floating Actions -->
+        <div class="floating-actions">
+            <a href="https://wa.me/966559160005" class="whatsapp-btn" target="_blank" title="تواصل عبر الواتساب">
+                <i class="fab fa-whatsapp"></i>
+                <span class="btn-tooltip">تحدث معنا</span>
+            </a>
+            <div class="scroll-buttons">
+                <button id="scrollToTop" class="scroll-btn" title="العودة للأعلى">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Language Switch Logic to preserve query parameters
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const code = params.get('code');
+            if (code) {
+                const langSwitch = document.getElementById('langSwitch');
+                const langSwitchMobile = document.querySelector('.lang-switch-mobile');
+                if (langSwitch) langSwitch.href = `package-details-en.html?code=${code}`;
+                if (langSwitchMobile) langSwitchMobile.href = `package-details-en.html?code=${code}`;
+            }
+        });
+    </script>
 
     <script src="packages-loader.js"></script>
     <script src="main.js"></script>
