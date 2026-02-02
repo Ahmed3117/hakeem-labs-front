@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الباقة | مختبرات حكيم الطبية</title>
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --pkg-color: var(--primary);
+        }
+
+        body {
+            background-color: var(--surface-alt);
+        }
+
+        /* Responsive Fixes for Details Page */
+        @media (max-width: 991px) {
+            .hero-content-wrapper {
+                flex-direction: column;
+                text-align: center !important;
+                padding-top: 60px;
+            }
+
+            .hero-text-side {
+                text-align: center !important;
+            }
+
+            .details-body-wrapper>div {
+                grid-template-columns: 1fr !important;
+            }
+
+            .hero-card-side {
+                flex: none !important;
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="../../assets/imgs/newlogo.png" alt="مختبرات حكيم الطبية"></a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="packages.html" class="active">الباقات</a></li>
+                    <li><a href="individual-tests.html">التحاليل الفردية</a></li>
+                    <li><a href="locations.html">فروعنا</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../en/package-details-en.html" class="btn btn-outline" id="langSwitch">En</a>
+                <button class="mobile-toggle"><span class="bar"></span><span class="bar"></span><span
+                        class="bar"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="../../assets/imgs/newlogo.png" alt="مختبرات حكيم الطبية">
+            </div>
+            <button class="close-mobile-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">عن حكيم</a></li>
+            <li><a href="services.html">خدماتنا</a></li>
+            <li><a href="packages.html" class="active">الباقات</a></li>
+            <li><a href="individual-tests.html">التحاليل الفردية</a></li>
+            <li><a href="locations.html">مواقعنا</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="../en/package-details-en.html" class="btn btn-outline lang-switch-mobile"
+                style="width: 100%; margin-bottom: 10px;">English Version</a>
+            <button class="btn btn-primary btn-lg" style="width: 100%;">حجز موعد الآن</button>
+        </div>
+    </div>
+
+    <!-- Static Package Details Content (Arabic - Standard Package Example) -->
+    <main id="packageDetailsContainer" style="padding-top: 0; min-height: 100vh;">
+        <!-- Immersive Hero Section -->
+        <div class="package-hero-luxury"
+            style="position: relative; overflow: hidden; background: #00aeef; color: white; padding: 180px 5% 180px;">
+            <div class="hero-shapes" style="position: absolute; inset: 0; pointer-events: none;">
+                <div
+                    style="position: absolute; top: -10%; right: -5%; width: 500px; height: 500px; background: #00337a; opacity: 0.15; filter: blur(120px); border-radius: 50%;">
+                </div>
+                <div
+                    style="position: absolute; bottom: -10%; left: -5%; width: 400px; height: 400px; background: var(--primary); opacity: 0.1; filter: blur(100px); border-radius: 50%;">
+                </div>
+            </div>
+
+            <div class="hero-content-wrapper reveal"
+                style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; display: flex; align-items: center; gap: 60px; flex-wrap: wrap;">
+                <div class="hero-text-side" style="flex: 1; min-width: 300px;">
+                    <div class="category-pill"
+                        style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.08); padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 25px; color: #00337a; font-weight: 800; font-size: 0.9rem;">
+                        <i class="fas fa-flask-vial"></i> فئة تشخيصية مميزة
+                    </div>
+                    <h1
+                        style="font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; font-weight: 900;">
+                        باقة ستاندرد</h1>
+                    <p
+                        style="font-size: 1.35rem; opacity: 0.8; max-width: 600px; line-height: 1.6; margin-bottom: 40px;">
+                        فحص أكثر عمقاً يشمل الفيتامينات الأساسية ووظائف الغدة والدهون.</p>
+
+                    <div class="hero-stats-row" style="display: flex; gap: 40px; margin-bottom: 40px;">
+                        <div class="h-stat">
+                            <strong style="display: block; font-size: 2.5rem; color: #00337a;">26</strong>
+                            <span style="opacity: 0.6; font-size: 0.9rem; font-weight: 700;">إجمالي الفحوصات</span>
+                        </div>
+                        <div class="h-stat">
+                            <strong style="display: block; font-size: 2.5rem; color: white;">~24h</strong>
+                            <span style="opacity: 0.6; font-size: 0.9rem; font-weight: 700;">متوسط النتائج</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-card-side" style="flex: 0 0 420px; min-width: 320px;">
+                    <div class="price-action-glass"
+                        style="background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); padding: 50px; border-radius: 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.5); text-align: center;">
+                        <div style="font-size: 1rem; opacity: 0.6; margin-bottom: 10px; font-weight: 700;">سعر الباقة
+                        </div>
+                        <div style="font-size: 4.5rem; font-weight: 900; margin-bottom: 10px;">299<span
+                                style="font-size: 1.2rem; opacity: 0.5; margin-inline-start: 10px;">ريال</span></div>
+
+                        <button class="btn btn-primary btn-lg full-width"
+                            style="background: #00337a; padding: 25px; font-size: 1.2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">احجز
+                            موعدك الآن</button>
+                        <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.5;">* النتائج مع ربط إكلينيكي كامل
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="details-body-wrapper"
+            style="max-width: 1200px; margin: -80px auto 100px; padding: 0 20px; position: relative; z-index: 10;">
+            <div style="display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: start;">
+
+                <!-- Left: Tests List -->
+                <div class="tests-list-section"
+                    style="background: white; border-radius: 32px; padding: 50px; box-shadow: var(--shadow-xl);">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+                        <h2 style="font-size: 2.2rem; color: var(--primary);">دليل الفحوصات الكامل</h2>
+                        <span
+                            style="background: var(--surface-alt); padding: 10px 20px; border-radius: 50px; font-weight: 800; color: #00337a;">26
+                            فحصاً</span>
+                    </div>
+
+                    <div class="tests-explorer-grid"
+                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px;">
+
+                        <!-- Core Tests -->
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">CBC</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">Blood Sugar</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">Cholesterol</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">ALT</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">AST</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">Creatinine</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">Urea</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">Uric Acid</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">Calcium</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">Iron</span>
+                        </div>
+
+                        <!-- Standard Additions -->
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">Triglycerides</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">HDL</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">LDL</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">Vitamin D</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">Vitamin B12</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">TSH</span>
+                        </div>
+                        <div class="test-entry reveal"
+                            style="display: flex; align-items: center; gap: 15px; padding: 18px 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s;">
+                            <div
+                                style="width: 10px; height: 10px; border-radius: 50%; background: #00337a; opacity: 0.6;">
+                            </div>
+                            <span style="font-weight: 600; font-size: 1.05rem; color: var(--text);">+10 أخرى...</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right: Info Panel -->
+                <div class="info-sidebar-panel" style="position: sticky; top: 120px;">
+                    <div class="preparation-card"
+                        style="background: var(--primary-dark); color: white; padding: 40px; border-radius: 32px; margin-bottom: 30px; box-shadow: var(--shadow-lg);">
+                        <i class="fas fa-info-circle fa-2x" style="color: var(--secondary); margin-bottom: 20px;"></i>
+                        <h3 style="color: white; font-size: 1.5rem; margin-bottom: 15px;">تعليمات التحضير</h3>
+                        <ul style="opacity: 0.85; font-size: 0.95rem;">
+                            <li style="margin-bottom: 12px;"><i class="fas fa-clock"></i> الصيام لمدة 10-12 ساعة</li>
+                            <li style="margin-bottom: 12px;"><i class="fas fa-water"></i> شرب الماء مسموح</li>
+                            <li style="margin-bottom: 12px;"><i class="fas fa-capsules"></i> الاستمرار في الأدوية
+                                الروتينية
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="support-card-luxury"
+                        style="background: white; border: 1px solid var(--border); padding: 40px; border-radius: 32px; text-align: center;">
+                        <div
+                            style="width: 70px; height: 70px; background: var(--secondary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--secondary);">
+                            <i class="fas fa-headset fa-2x"></i>
+                        </div>
+                        <h3 style="margin-bottom: 10px;">تحتاج مساعدة؟</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px;">خبراؤنا جاهزون
+                            لمساعدتك في اختيار الباقة المناسبة.</p>
+                        <a href="https://wa.me/966559160005" target="_blank" class="btn btn-outline full-width"
+                            style="border-color: var(--secondary); color: var(--secondary); font-weight: 800;">
+                            <i class="fab fa-whatsapp"></i> تحدث معنا الآن
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom CTA -->
+            <div style="text-align: center; margin-top: 80px;">
+                <a href="packages.html"
+                    style="display: inline-flex; align-items: center; gap: 10px; font-weight: 800; color: var(--primary); text-decoration: none;">
+                    <i class="fas fa-arrow-left"></i> استكشف كافة الباقات الأخرى
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-col brand-col">
+                <div class="footer-logos">
+                    <img src="../../assets/imgs/newlogo.png" alt="مختبرات حكيم" style="height: 100px;">
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 400px; line-height: 1.8;">
+                    شريك تشخيصي وصحي قائم على البيانات، يقدم رعاية دقيقة وسريعة تحفظ كرامة الإنسان وتنسجم مع رؤية
+                    المملكة 2030.
+                </p>
+                <div style="margin-top: 30px; font-weight: 700; color: var(--primary);">
+                    دقة. موثوقية. سرعة.
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">عن المختبر</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="packages.html">الباقات والأسعار</a></li>
+                    <li><a href="locations.html">فروعنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>سياساتنا</h4>
+                <ul class="footer-links">
+                    <li><a href="terms-conditions.html">الشروط والأحكام</a></li>
+                    <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                    <li><a href="patient-rights.html">حقوق ومسؤوليات المريض</a></li>
+                    <li><a href="faqs.html">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <ul class="footer-links">
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-phone"
+                            style="color: var(--primary);"></i> +966 9200 35397</li>
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-envelope"
+                            style="color: var(--primary);"></i> info@hakeemlabs.com</li>
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-map-marker-alt"
+                            style="color: var(--primary);"></i>الرياض : حي السليمانية، طريق الملك عبد العزيز الفرعي</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ساعات العمل</h4>
+                <p style="font-size: 0.95rem; color: var(--text-muted);">
+                    السبت–الخميس: 7:30 ص – 10:00 م<br>
+                    الجمعة: مغلق
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>© 2020 مختبرات حكيم الطبية - HAKEEM MEDICAL LABS</div>
+                <div style="font-size: 0.85rem; opacity: 0.7;">تقنية المعلومات بواسطة Rabicana</div>
+            </div>
+        </div>
+
+        <!-- Floating Actions -->
+        <div class="floating-actions">
+            <a href="https://wa.me/966559160005" class="whatsapp-btn" target="_blank" title="تواصل عبر الواتساب">
+                <i class="fab fa-whatsapp"></i>
+                <span class="btn-tooltip">تحدث معنا</span>
+            </a>
+            <div class="scroll-buttons">
+                <button id="scrollToTop" class="scroll-btn" title="العودة للأعلى">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Switch Logic to preserve query parameters
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const code = params.get('code');
+            if (code) {
+                const langSwitch = document.getElementById('langSwitch');
+                const langSwitchMobile = document.querySelector('.lang-switch-mobile');
+                if (langSwitch) langSwitch.href = `../en/package-details-en.html?code=${code}`;
+                if (langSwitchMobile) langSwitchMobile.href = `../en/package-details-en.html?code=${code}`;
+            }
+        });
+    </script>
+
+    <!-- Dynamic Loader Removed for Static version -->
+    <!-- <script src="../../assets/js/packages-loader.js"></script> -->
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>

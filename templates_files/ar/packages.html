@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الباقات والأسعار | مختبرات حكيم الطبية</title>
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .packages-grid-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .package-card-tier {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-card-tier:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--secondary);
+        }
+
+        .tier-header {
+            padding: 40px;
+            text-align: center;
+            background: var(--surface-alt);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tier-header.featured {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .tier-header.featured h3,
+        .tier-header.featured .price {
+            color: white !important;
+        }
+
+        .tier-header h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .tier-header .price {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--text);
+        }
+
+        .tier-header .price span {
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        .tier-body {
+            padding: 40px;
+            flex-grow: 1;
+        }
+
+        .tier-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .tier-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .tier-features li:last-child {
+            border-bottom: none;
+        }
+
+        .tier-features i {
+            color: var(--secondary);
+        }
+
+        .tier-footer {
+            padding: 0 40px 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="../../assets/imgs/newlogo.png" alt="مختبرات حكيم الطبية"></a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="packages.html" class="active">الباقات</a></li>
+                    <li><a href="individual-tests.html">التحاليل الفردية</a></li>
+                    <li><a href="locations.html">فروعنا</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../en/packages-en.html" class="btn btn-outline">En</a>
+                <button class="mobile-toggle"><span class="bar"></span><span class="bar"></span><span
+                        class="bar"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <!-- Page Header -->
+        <section class="section"
+            style="background: var(--primary-gradient); color: white; text-align: center; padding: 100px 10%;">
+            <h1 style="color: white; font-size: 3.5rem; margin-bottom: 20px;">باقات حكيم للعافية</h1>
+            <p style="font-size: 1.3rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">صممنا لك مجموعة من الباقات
+                المتكاملة لتناسب احتياجاتك الصحية وتمنحك الطمأنينة التي تستحقها.</p>
+        </section>
+
+        <!-- Package Tiers -->
+        <section class="section">
+            <div class="packages-grid-tiers">
+
+                <div
+                    style="text-align: center; width: 100%; grid-column: 1 / -1; padding: 40px; color: var(--text-muted);">
+                    <i class="fas fa-spinner fa-spin fa-2x"></i>
+                    <p style="margin-top: 10px;">جاري تحميل الباقات...</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Home Visit Call to Action -->
+        <section class="section" style="background: var(--surface-alt); text-align: center;">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2>هل تفضل إجراء الفحص في منزلك؟</h2>
+                <p style="margin: 20px 0 40px;">نقدم خدمة الزيارات المنزلية لجميع الباقات مع طاقم طبي متخصص يضمن لك
+                    الراحة والخصوصية.</p>
+                <button class="btn btn-secondary btn-lg">طلب زيارة منزلية</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-col brand-col">
+                <div class="footer-logos">
+                    <img src="../../assets/imgs/newlogo.png" alt="مختبرات حكيم" style="height: 100px;">
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 400px; line-height: 1.8;">
+                    شريك تشخيصي وصحي قائم على البيانات، يقدم رعاية دقيقة وسريعة تحفظ كرامة الإنسان وتنسجم مع رؤية
+                    المملكة 2030.
+                </p>
+                <div style="margin-top: 30px; font-weight: 700; color: var(--primary);">
+                    دقة. موثوقية. سرعة.
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">عن المختبر</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="packages.html">الباقات والأسعار</a></li>
+                    <li><a href="locations.html">فروعنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>سياساتنا</h4>
+                <ul class="footer-links">
+                    <li><a href="terms-conditions.html">الشروط والأحكام</a></li>
+                    <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                    <li><a href="patient-rights.html">حقوق ومسؤوليات المريض</a></li>
+                    <li><a href="faqs.html">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <ul class="footer-links">
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-phone"
+                            style="color: var(--primary);"></i> +966 9200 35397</li>
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-envelope"
+                            style="color: var(--primary);"></i> info@hakeemlabs.com</li>
+                    <li style="display: flex; gap: 15px; align-items: center;"><i class="fas fa-map-marker-alt"
+                            style="color: var(--primary);"></i>الرياض : حي السليمانية، طريق الملك عبد العزيز الفرعي</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ساعات العمل</h4>
+                <p style="font-size: 0.95rem; color: var(--text-muted);">
+                    السبت–الخميس: 7:30 ص – 10:00 م<br>
+                    الجمعة: مغلق
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>© 2020 مختبرات حكيم الطبية - HAKEEM MEDICAL LABS</div>
+                <div style="font-size: 0.85rem; opacity: 0.7;">تقنية المعلومات بواسطة Rabicana</div>
+            </div>
+        </div>
+
+        <!-- Floating Actions -->
+        <div class="floating-actions">
+            <a href="https://wa.me/966559160005" class="whatsapp-btn" target="_blank" title="تواصل عبر الواتساب">
+                <i class="fab fa-whatsapp"></i>
+                <span class="btn-tooltip">تحدث معنا</span>
+            </a>
+            <div class="scroll-buttons">
+                <button id="scrollToTop" class="scroll-btn" title="العودة للأعلى">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/packages-loader.js"></script>
+    <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
