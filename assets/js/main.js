@@ -26,21 +26,24 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Unobserve after revealing to save performance
                 revealObserver.unobserve(entry.target);
             }
         });
     }, revealOptions);
 
-    // Targets for reveal
-    // Targets for reveal (skip those with no-reveal class)
-    const revealTargets = document.querySelectorAll('section:not(.no-reveal), .stat-item, .package-card, .feature-card, .floating-card, .reveal');
-    revealTargets.forEach(target => {
-        if (!target.classList.contains('reveal')) {
-            target.classList.add('reveal');
-        }
-        revealObserver.observe(target);
-    });
+    window.triggerReveal = () => {
+        const revealTargets = document.querySelectorAll('section:not(.no-reveal), .stat-item, .package-card, .feature-card, .package-card-tier, .test-entry, .floating-card, .reveal');
+        revealTargets.forEach(target => {
+            if (!target.classList.contains('active')) {
+                if (!target.classList.contains('reveal')) {
+                    target.classList.add('reveal');
+                }
+                revealObserver.observe(target);
+            }
+        });
+    };
+
+    window.triggerReveal();
 
     // 3. Booking Modal Interface
     const ensureModalExists = () => {

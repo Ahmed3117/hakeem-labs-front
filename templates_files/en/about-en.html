@@ -51,13 +51,15 @@
                 <div class="home-service-content">
                     <div style="margin-bottom: 40px;">
                         <h2 style="color: var(--primary);"><i class="fas fa-eye"></i> Our Vision</h2>
-                        <p style="font-size: 1.25rem;">To be Saudi Arabia’s preferred diagnostic and wellness partner,
+                        <p style="font-size: 1.25rem;" id="vision-text">To be Saudi Arabia’s preferred diagnostic and
+                            wellness partner,
                             improve longevity through data-driven care and shared value for all, by empowering everyone.
                         </p>
                     </div>
                     <div>
                         <h2 style="color: var(--primary);"><i class="fas fa-bullseye"></i> Our Mission</h2>
-                        <p style="font-size: 1.25rem;">To honor the human story behind every sample. We commit to
+                        <p style="font-size: 1.25rem;" id="mission-text">To honor the human story behind every sample.
+                            We commit to
                             improvement and respect for time, empowering our people to serve Vision 2030 as your
                             lifelong partner.</p>
                     </div>
@@ -76,43 +78,9 @@
                 <h2>H.A.K.E.E.M Code</h2>
                 <p>The values that guide every decision we make and every sample we analyze.</p>
             </div>
-            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">H</div>
-                    <h3>Honor the Story</h3>
-                    <p>Every sample represents a human life and story.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">A</div>
-                    <h3>Agility with Precision</h3>
-                    <p>Fast delivery without compromising accuracy.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">K</div>
-                    <h3>Knowledge for Impact</h3>
-                    <p>Turning data into wisdom that empowers decisions.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">E</div>
-                    <h3>Excellence in Every Detail</h3>
-                    <p>Zero defects in service and analysis.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">E</div>
-                    <h3>Evolve Daily</h3>
-                    <p>Continuous self-improvement mindset.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">M</div>
-                    <h3>Mission-Driven Ownership</h3>
-                    <p>Ownership mindset aligned with Vision 2030.</p>
-                </div>
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));"
+                id="hakeem-values-grid">
+                <!-- Populated by JS -->
             </div>
         </section>
 
@@ -224,6 +192,7 @@
         </div>
     </footer>
 
+    <script src="../../assets/js/content-loader.js"></script>
     <script src="../../assets/js/packages-loader.js"></script>
     <script src="../../assets/js/main.js"></script>
 </body>

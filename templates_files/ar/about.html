@@ -50,13 +50,15 @@
                 <div class="home-service-content">
                     <div style="margin-bottom: 40px;">
                         <h2 style="color: var(--primary);"><i class="fas fa-eye"></i> رؤيتنا</h2>
-                        <p style="font-size: 1.25rem;">أن نكون الشريك المفضل والمنصة الموثوقة للخدمات التشخيصية في
+                        <p style="font-size: 1.25rem;" id="vision-text">أن نكون الشريك المفضل والمنصة الموثوقة للخدمات
+                            التشخيصية في
                             المملكة العربية السعودية، نساهم في تعزيز جودة الحياة وإطالة العمر الصحي عبر الرعاية القائمة
                             على البيانات، وتحقيق قيمة مستدامة تضمن تمكين كافة فئات المجتمع.</p>
                     </div>
                     <div>
                         <h2 style="color: var(--primary);"><i class="fas fa-bullseye"></i> رسالتنا</h2>
-                        <p style="font-size: 1.25rem;">نلتزم بتقدير القيمة الإنسانية الكامنة خلف كل عينة مخبرية، وتسخير
+                        <p style="font-size: 1.25rem;" id="mission-text">نلتزم بتقدير القيمة الإنسانية الكامنة خلف كل
+                            عينة مخبرية، وتسخير
                             طاقاتنا للتطوير المستمر واستثمار الوقت بكفاءة، مع تمكين الكفاءات الوطنية للمساهمة في تحقيق
                             طموحات رؤية المملكة 2030 كشريك موثوق في رحلة الصحة.</p>
                     </div>
@@ -75,43 +77,9 @@
                 <h2>كود H.A.K.E.E.M</h2>
                 <p>القيم التي توجه كل قرار نتخذه وكل عينة نحللها.</p>
             </div>
-            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">H</div>
-                    <h3>الخصوصية الإنسانية</h3>
-                    <p>كل عينة تمثل حياة إنسان وقصة عائلة.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">A</div>
-                    <h3>المرونة والإتقان</h3>
-                    <p>السرعة في الإنجاز دون المساس بالدقة.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">K</div>
-                    <h3>المعرفة المؤثرة</h3>
-                    <p>تحويل البيانات إلى بصيرة تمكّن القرار.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">E</div>
-                    <h3>التميز في التفاصيل</h3>
-                    <p>صفر أخطاء في الخدمة والتحليل.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">E</div>
-                    <h3>التطور المستمر</h3>
-                    <p>عقلية التحسين المستمر والتراكم الإيجابي.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper"
-                        style="font-size: 2rem; font-weight: 900; color: var(--secondary);">M</div>
-                    <h3>ملكية الرسالة</h3>
-                    <p>تحمل المسؤولية والمبادرة لتحقيق رؤية 2030.</p>
-                </div>
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));"
+                id="hakeem-values-grid">
+                <!-- Populated by JS -->
             </div>
         </section>
 
@@ -223,6 +191,7 @@
         </div>
     </footer>
 
+    <script src="../../assets/js/content-loader.js"></script>
     <script src="../../assets/js/packages-loader.js"></script>
     <script src="../../assets/js/main.js"></script>
 </body>

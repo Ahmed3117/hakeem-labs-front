@@ -1,422 +1,294 @@
 {
     "packages": [
         {
-            "key": "core",
+            "code": "core",
             "name": {
                 "ar": "الباقة الأساسية",
                 "en": "Core Package"
             },
-            "tests_count": 15,
             "price": {
                 "value": 119,
                 "currency": "SAR"
             },
-            "highlights_ar": [
-                "فحص أساسي للاطمئنان على الصحة العامة",
-                "تقييم صحة الدم ووظائف الكبد والكلى",
-                "فحص الدهون والكوليسترول ومؤشرات القلب",
-                "قياس السكر والغدة الدرقية",
-                "مناسب كبداية أو فحص دوري سريع"
-            ],
+            "color": "#005bb5",
+            "icon": "fa-shield-heart",
+            "description": {
+                "ar": "الباقة المثالية للاطمئنان الدوري السريع على الوظائف الأساسية للجسم.",
+                "en": "The ideal package for regular quick checks on the body's basic functions."
+            },
             "tests": [
-                {
-                    "ar": "صورة دم كاملة",
-                    "en": "CBC"
-                },
-                {
-                    "ar": "الكوليسترول الكلي",
-                    "en": "Total Cholesterol"
-                },
-                {
-                    "ar": "الكوليسترول عالي الكثافة",
-                    "en": "HDL Cholesterol"
-                },
-                {
-                    "ar": "الكوليسترول منخفض الكثافة",
-                    "en": "LDL Cholesterol"
-                },
-                {
-                    "ar": "معدل الخطورة",
-                    "en": "HDL/LDL Ratio"
-                },
-                {
-                    "ar": "الدهون الثلاثية",
-                    "en": "Triglycerides"
-                },
-                {
-                    "ar": "يوريا",
-                    "en": "Urea"
-                },
-                {
-                    "ar": "كرياتينين",
-                    "en": "Creatinine"
-                },
-                {
-                    "ar": "ALT إنزيم الكبد",
-                    "en": "ALT"
-                },
-                {
-                    "ar": "AST إنزيم الكبد",
-                    "en": "AST"
-                },
-                {
-                    "ar": "الكالسيوم",
-                    "en": "Calcium"
-                },
-                {
-                    "ar": "حمض اليوريك",
-                    "en": "Uric Acid"
-                },
-                {
-                    "ar": "سكر صائم",
-                    "en": "Fasting Blood Sugar"
-                },
-                {
-                    "ar": "الهرمون المحفز للغدة الدرقية",
-                    "en": "TSH"
-                },
-                {
-                    "ar": "المغنيسيوم",
-                    "en": "Magnesium"
-                }
+                "CBC",
+                "Blood Sugar",
+                "Cholesterol",
+                "ALT",
+                "AST",
+                "Creatinine",
+                "Urea",
+                "Uric Acid",
+                "Calcium",
+                "Iron",
+                "Total Protein",
+                "Albumin",
+                "Globulin",
+                "A/G Ratio",
+                "Bilirubin Total"
             ]
         },
         {
-            "key": "standard",
+            "code": "standard",
             "name": {
                 "ar": "باقة ستاندرد",
                 "en": "Standard Package"
             },
-            "tests_count": 26,
             "price": {
                 "value": 299,
                 "currency": "SAR"
             },
-            "tests": [
-                "CBC",
-                "Total Cholesterol",
+            "color": "#00bfa5",
+            "icon": "fa-flask-vial",
+            "description": {
+                "ar": "فحص أكثر عمقاً يشمل الفيتامينات الأساسية ووظائف الغدة والدهون.",
+                "en": "A deeper screening covering essential vitamins, thyroid function, and lipids."
+            },
+            "extends": "core",
+            "add_tests": [
+                "Triglycerides",
                 "HDL",
                 "LDL",
-                "HDL/LDL Ratio",
-                "Triglycerides",
-                "Urea",
-                "Creatinine",
-                "ALT",
-                "AST",
-                "Calcium",
-                "Uric Acid",
-                "Fasting Blood Sugar",
-                "TSH",
-                "Magnesium",
                 "Vitamin D",
                 "Vitamin B12",
-                "PTH",
-                "Phosphorus",
-                "HbA1C",
-                "Albumin",
-                "Bilirubin Total",
-                "Bilirubin Direct",
-                "Bilirubin Indirect",
-                "Free T4",
-                "AST/ALT Ratio"
+                "TSH",
+                "ALP",
+                "GGT",
+                "Sodium",
+                "Potassium",
+                "Chloride"
             ]
         },
         {
-            "key": "gold_him",
+            "code": "gold_him",
             "name": {
-                "ar": "الباقة الذهبية له",
+                "ar": "الباقة الذهبية للرجال",
                 "en": "Gold Package for Him"
             },
-            "tests_count": 40,
             "price": {
                 "value": 499,
                 "currency": "SAR"
             },
+            "color": "#d4af37",
+            "icon": "fa-mars",
             "gift": "50 SAR Voucher",
-            "tests": [
-                "CBC",
-                "Total Cholesterol",
-                "HDL",
-                "LDL",
-                "HDL/LDL Ratio",
-                "Triglycerides",
-                "Urea",
-                "Creatinine",
-                "ALT",
-                "AST",
-                "Calcium",
-                "Uric Acid",
-                "Fasting Blood Sugar",
-                "TSH",
+            "description": {
+                "ar": "باقة شاملة تركز على صحة الرجل، الهرمونات، ومؤشرات البروستاتا.",
+                "en": "A comprehensive package focusing on men's health, hormones, and prostate markers."
+            },
+            "extends": "standard",
+            "add_tests": [
+                "Testosterone Total",
+                "PSA Total",
+                "PSA Free",
+                "LH",
+                "FSH",
+                "Prolactin",
                 "Magnesium",
-                "Vitamin D",
-                "Vitamin B12",
-                "PTH",
                 "Phosphorus",
-                "HbA1C",
-                "Albumin",
-                "Bilirubin Total",
-                "Bilirubin Direct",
-                "Bilirubin Indirect",
-                "Free T4",
-                "AST/ALT Ratio",
-                "Sodium",
-                "Chloride",
-                "Potassium",
-                "ALP",
-                "Total Protein",
-                "Globulin",
-                "CRP",
-                "GGT",
-                "eGFR",
-                "A/G Ratio",
-                "PSA",
-                "Testosterone",
-                "Non HDL",
-                "Free T3"
+                "CRP"
             ]
         },
         {
-            "key": "gold_her",
+            "code": "gold_her",
             "name": {
-                "ar": "الباقة الذهبية لها",
+                "ar": "الباقة الذهبية للسيدات",
                 "en": "Gold Package for Her"
             },
-            "tests_count": 40,
             "price": {
                 "value": 499,
                 "currency": "SAR"
             },
+            "color": "#e91e63",
+            "icon": "fa-venus",
             "gift": "50 SAR Voucher",
-            "tests": [
-                "CBC",
-                "Total Cholesterol",
-                "HDL",
-                "LDL",
-                "HDL/LDL Ratio",
-                "Triglycerides",
-                "Urea",
-                "Creatinine",
-                "ALT",
-                "AST",
-                "Calcium",
-                "Uric Acid",
-                "Fasting Blood Sugar",
+            "description": {
+                "ar": "باقة متكاملة للعناية بصحة المرأة، توازن الهرمونات ومخزون الحديد.",
+                "en": "An integrated package for women's health, hormonal balance, and iron stores."
+            },
+            "extends": "standard",
+            "add_tests": [
+                "Estrogen",
+                "Progesterone",
+                "FSH",
+                "LH",
+                "Prolactin",
                 "TSH",
-                "Magnesium",
-                "Vitamin D",
-                "Vitamin B12",
-                "PTH",
-                "Phosphorus",
-                "HbA1C",
-                "Albumin",
-                "Bilirubin Total",
-                "Bilirubin Direct",
-                "Bilirubin Indirect",
-                "Free T4",
-                "AST/ALT Ratio",
-                "Sodium",
-                "Chloride",
-                "Potassium",
-                "ALP",
-                "Total Protein",
-                "Globulin",
+                "Ferritin",
                 "CRP",
-                "GGT",
-                "eGFR",
-                "A/G Ratio",
-                "Iron",
-                "Zinc",
-                "Non HDL",
-                "Free T3"
+                "Magnesium"
             ]
         },
         {
-            "key": "diamond_him",
+            "code": "diamond_him",
             "name": {
-                "ar": "الباقة الماسية له",
+                "ar": "الباقة الماسية للرجال",
                 "en": "Diamond Package for Him"
             },
-            "tests_count": 53,
             "price": {
                 "value": 599,
                 "currency": "SAR"
             },
+            "color": "#00bcd4",
+            "icon": "fa-gem",
             "gift": "100 SAR Voucher",
-            "tests": [
-                "... جميع تحاليل Gold Him",
-                "Rheumatoid Factor",
-                "Folic Acid",
+            "description": {
+                "ar": "فحص ماسي دقيق يشمل هرمونات التوتر، السكر التراكمي والفيتامينات النادرة.",
+                "en": "Dimaond screening including stress hormones, HbA1c, and trace vitamins."
+            },
+            "extends": "gold_him",
+            "add_tests": [
+                "HbA1c",
                 "Urine Analysis",
-                "TIBC",
-                "UIBC",
-                "Transferrin Saturation",
-                "IgE",
                 "Ferritin",
-                "ESR",
-                "Free PSA",
-                "FPSA/TPSA Ratio"
+                "Vitamin A",
+                "Vitamin E",
+                "IgE",
+                "Cortisol",
+                "Insulin"
             ]
         },
         {
-            "key": "diamond_her",
+            "code": "diamond_her",
             "name": {
-                "ar": "الباقة الماسية لها",
+                "ar": "الباقة الماسية للسيدات",
                 "en": "Diamond Package for Her"
             },
-            "tests_count": 53,
             "price": {
                 "value": 599,
                 "currency": "SAR"
             },
+            "color": "#f06292",
+            "icon": "fa-gem",
             "gift": "100 SAR Voucher",
-            "tests": [
-                "... جميع تحاليل Gold Her",
-                "Corrected Calcium",
-                "Chol/HDL Ratio",
-                "Rheumatoid Factor",
-                "Folic Acid",
+            "description": {
+                "ar": "أقصى درجات العناية بتفاصيل صحة المرأة، من الهرمونات إلى صحة المناعة.",
+                "en": "The ultimate care for women's health details, from hormones to immune health."
+            },
+            "extends": "gold_her",
+            "add_tests": [
+                "HbA1c",
                 "Urine Analysis",
-                "TIBC",
-                "UIBC",
-                "Transferrin Saturation",
-                "IgE",
                 "Ferritin",
-                "ESR",
+                "Vitamin A",
+                "Vitamin E",
+                "IgE",
                 "Cortisol",
-                "Copper"
+                "Insulin"
             ]
         },
         {
-            "key": "elite_him",
+            "code": "elite_him",
             "name": {
-                "ar": "باقة النخبة له",
+                "ar": "باقة النخبة للرجال",
                 "en": "Elite Package for Him"
             },
-            "tests_count": 75,
             "price": {
                 "value": 1699,
                 "currency": "SAR"
             },
+            "color": "#673ab7",
+            "icon": "fa-crown",
             "gift": "150 SAR + Home Visit",
-            "tests": [
-                "... جميع تحاليل Diamond Him",
-                "Vitamin A",
-                "Vitamin B1",
-                "Vitamin B2",
-                "Vitamin B6",
-                "Vitamin C",
-                "Vitamin E",
-                "SHBG",
-                "Free Testosterone",
-                "DHEA-S",
-                "Prolactin",
-                "FSH",
-                "LH",
-                "Estradiol",
-                "HOMA-IR",
-                "Insulin Fasting",
-                "CRP-HS",
+            "description": {
+                "ar": "خيار النخبة لفحص شامل جداً يشمل وظائف القلب المتقدمة والإنزيمات الهاضمة.",
+                "en": "Elite choice for a very comprehensive screen including advanced cardiac markers."
+            },
+            "extends": "diamond_him",
+            "add_tests": [
+                "Troponin",
+                "CK-MB",
                 "LDH",
-                "Apo A",
-                "Apo B",
+                "Homocysteine",
                 "Amylase",
-                "Lipase",
-                "UBT Test"
+                "Lipase"
             ]
         },
         {
-            "key": "elite_her",
+            "code": "elite_her",
             "name": {
-                "ar": "باقة النخبة لها",
+                "ar": "باقة النخبة للسيدات",
                 "en": "Elite Package for Her"
             },
-            "tests_count": 75,
             "price": {
                 "value": 1699,
                 "currency": "SAR"
             },
+            "color": "#9c27b0",
+            "icon": "fa-crown",
             "gift": "150 SAR + Home Visit",
-            "tests": [
-                "... جميع تحاليل Diamond Her",
-                "Vitamin A",
-                "Vitamin B1",
-                "Vitamin B2",
-                "Vitamin B6",
-                "Vitamin C",
-                "Vitamin E",
-                "SHBG",
-                "CA-125",
-                "DHEA-S",
-                "Prolactin",
-                "FSH",
-                "LH",
-                "Estradiol",
-                "HOMA-IR",
-                "Insulin Fasting",
-                "CRP-HS",
+            "description": {
+                "ar": "فحص ملكي للنخبة يغطي كافة جوانب الصحة الحيوية والوقائية للمرأة.",
+                "en": "Royal elite screening covering all aspects of vital and preventive health for women."
+            },
+            "extends": "diamond_her",
+            "add_tests": [
+                "Troponin",
+                "CK-MB",
                 "LDH",
-                "Apo A",
-                "Apo B",
+                "Homocysteine",
                 "Amylase",
-                "Lipase",
-                "UBT Test"
+                "Lipase"
             ]
         },
         {
-            "key": "royal_him",
+            "code": "royal_him",
             "name": {
-                "ar": "الباقة الملكية له",
+                "ar": "الباقة الملكية للرجال",
                 "en": "Royal Package for Him"
             },
-            "tests_count": 87,
             "price": {
                 "value": 2828,
                 "currency": "SAR"
             },
+            "color": "#1a237e",
+            "icon": "fa-diamond",
             "gift": "250 SAR + Home Visit",
-            "tests": [
-                "... جميع تحاليل Elite Him",
-                "Calprotectin",
-                "FIT",
-                "Stool Analysis",
-                "H. pylori Stool Ag",
-                "HCV Ab",
-                "HIV Combo",
-                "HBsAg",
-                "HBsAb",
-                "Microalbuminuria",
-                "Anti Gliadin IgG",
-                "Anti tTG IgG",
-                "Food Intolerance"
+            "description": {
+                "ar": "العمق الكامل للصحة: تشمل المسح الفيروسي الشامل وفحص الحساسية الغذائية.",
+                "en": "The full depth of health: including virus screening and food intolerance tests."
+            },
+            "extends": "elite_him",
+            "add_tests": [
+                "Hepatitis B Surface Antigen",
+                "Hepatitis C Antibody",
+                "HIV",
+                "Food Intolerance Test",
+                "Celiac Panel",
+                "Allergy Panel"
             ]
         },
         {
-            "key": "royal_her",
+            "code": "royal_her",
             "name": {
-                "ar": "الباقة الملكية لها",
+                "ar": "الباقة الملكية للسيدات",
                 "en": "Royal Package for Her"
             },
-            "tests_count": 87,
             "price": {
                 "value": 2929,
                 "currency": "SAR"
             },
+            "color": "#121858",
+            "icon": "fa-diamond",
             "gift": "250 SAR + Home Visit",
-            "tests": [
-                "... جميع تحاليل Elite Her",
-                "Calprotectin",
-                "FIT",
-                "Stool Analysis",
-                "H. pylori Stool Ag",
-                "HCV Ab",
-                "HIV Combo",
-                "HBsAg",
-                "HBsAb",
-                "Microalbuminuria",
-                "Anti Gliadin IgG",
-                "Anti tTG IgG",
-                "Food Intolerance"
+            "description": {
+                "ar": "القمة في الرعاية الوقائية: تغطية شاملة للفيروسات والمناعة وحساسية الطعام.",
+                "en": "The peak of preventive care: comprehensive coverage of viruses, immunity, and food allergy."
+            },
+            "extends": "elite_her",
+            "add_tests": [
+                "Hepatitis B Surface Antigen",
+                "Hepatitis C Antibody",
+                "HIV",
+                "Food Intolerance Test",
+                "Celiac Panel",
+                "Allergy Panel"
             ]
         }
     ]

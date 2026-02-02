@@ -1,172 +1,14 @@
 /**
- * Al-Safwa Lab - Packages Loader
+ * Hakeem Labs - Packages Loader
  * Premium Redesign: Dynamic styling, inheritance, and professional details page.
+ * Fetches package data from JSON.
  */
-(function() {
-    const PACKAGES_DATA = {
-        "packages": [
-            {
-                "code": "core",
-                "name": { "ar": "الباقة الأساسية", "en": "Core Package" },
-                "price": { "value": 119, "currency": "SAR" },
-                "color": "#005bb5",
-                "icon": "fa-shield-heart",
-                "description": {
-                    "ar": "الباقة المثالية للاطمئنان الدوري السريع على الوظائف الأساسية للجسم.",
-                    "en": "The ideal package for regular quick checks on the body's basic functions."
-                },
-                "tests": [
-                    "CBC", "Blood Sugar", "Cholesterol", "ALT", "AST", "Creatinine", "Urea", "Uric Acid", "Calcium", "Iron", "Total Protein", "Albumin", "Globulin", "A/G Ratio", "Bilirubin Total"
-                ]
-            },
-            {
-                "code": "standard",
-                "name": { "ar": "باقة ستاندرد", "en": "Standard Package" },
-                "price": { "value": 299, "currency": "SAR" },
-                "color": "#00bfa5",
-                "icon": "fa-flask-vial",
-                "description": {
-                    "ar": "فحص أكثر عمقاً يشمل الفيتامينات الأساسية ووظائف الغدة والدهون.",
-                    "en": "A deeper screening covering essential vitamins, thyroid function, and lipids."
-                },
-                "extends": "core",
-                "add_tests": [
-                    "Triglycerides", "HDL", "LDL", "Vitamin D", "Vitamin B12", "TSH", "ALP", "GGT", "Sodium", "Potassium", "Chloride"
-                ]
-            },
-            {
-                "code": "gold_him",
-                "name": { "ar": "الباقة الذهبية للرجال", "en": "Gold Package for Him" },
-                "price": { "value": 499, "currency": "SAR" },
-                "color": "#d4af37",
-                "icon": "fa-mars",
-                "gift": "50 SAR Voucher",
-                "description": {
-                    "ar": "باقة شاملة تركز على صحة الرجل، الهرمونات، ومؤشرات البروستاتا.",
-                    "en": "A comprehensive package focusing on men's health, hormones, and prostate markers."
-                },
-                "extends": "standard",
-                "add_tests": [
-                    "Testosterone Total", "PSA Total", "PSA Free", "LH", "FSH", "Prolactin", "Magnesium", "Phosphorus", "CRP"
-                ]
-            },
-            {
-                "code": "gold_her",
-                "name": { "ar": "الباقة الذهبية للسيدات", "en": "Gold Package for Her" },
-                "price": { "value": 499, "currency": "SAR" },
-                "color": "#e91e63",
-                "icon": "fa-venus",
-                "gift": "50 SAR Voucher",
-                "description": {
-                    "ar": "باقة متكاملة للعناية بصحة المرأة، توازن الهرمونات ومخزون الحديد.",
-                    "en": "An integrated package for women's health, hormonal balance, and iron stores."
-                },
-                "extends": "standard",
-                "add_tests": [
-                    "Estrogen", "Progesterone", "FSH", "LH", "Prolactin", "TSH", "Ferritin", "CRP", "Magnesium"
-                ]
-            },
-            {
-                "code": "diamond_him",
-                "name": { "ar": "الباقة الماسية للرجال", "en": "Diamond Package for Him" },
-                "price": { "value": 599, "currency": "SAR" },
-                "color": "#00bcd4",
-                "icon": "fa-gem",
-                "gift": "100 SAR Voucher",
-                "description": {
-                    "ar": "فحص ماسي دقيق يشمل هرمونات التوتر، السكر التراكمي والفيتامينات النادرة.",
-                    "en": "Dimaond screening including stress hormones, HbA1c, and trace vitamins."
-                },
-                "extends": "gold_him",
-                "add_tests": [
-                    "HbA1c", "Urine Analysis", "Ferritin", "Vitamin A", "Vitamin E", "IgE", "Cortisol", "Insulin"
-                ]
-            },
-            {
-                "code": "diamond_her",
-                "name": { "ar": "الباقة الماسية للسيدات", "en": "Diamond Package for Her" },
-                "price": { "value": 599, "currency": "SAR" },
-                "color": "#f06292",
-                "icon": "fa-gem",
-                "gift": "100 SAR Voucher",
-                "description": {
-                    "ar": "أقصى درجات العناية بتفاصيل صحة المرأة، من الهرمونات إلى صحة المناعة.",
-                    "en": "The ultimate care for women's health details, from hormones to immune health."
-                },
-                "extends": "gold_her",
-                "add_tests": [
-                    "HbA1c", "Urine Analysis", "Ferritin", "Vitamin A", "Vitamin E", "IgE", "Cortisol", "Insulin"
-                ]
-            },
-            {
-                "code": "elite_him",
-                "name": { "ar": "باقة النخبة للرجال", "en": "Elite Package for Him" },
-                "price": { "value": 1699, "currency": "SAR" },
-                "color": "#673ab7",
-                "icon": "fa-crown",
-                "gift": "150 SAR + Home Visit",
-                "description": {
-                    "ar": "خيار النخبة لفحص شامل جداً يشمل وظائف القلب المتقدمة والإنزيمات الهاضمة.",
-                    "en": "Elite choice for a very comprehensive screen including advanced cardiac markers."
-                },
-                "extends": "diamond_him",
-                "add_tests": [
-                    "Troponin", "CK-MB", "LDH", "Homocysteine", "Amylase", "Lipase"
-                ]
-            },
-            {
-                "code": "elite_her",
-                "name": { "ar": "باقة النخبة للسيدات", "en": "Elite Package for Her" },
-                "price": { "value": 1699, "currency": "SAR" },
-                "color": "#9c27b0",
-                "icon": "fa-crown",
-                "gift": "150 SAR + Home Visit",
-                "description": {
-                    "ar": "فحص ملكي للنخبة يغطي كافة جوانب الصحة الحيوية والوقائية للمرأة.",
-                    "en": "Royal elite screening covering all aspects of vital and preventive health for women."
-                },
-                "extends": "diamond_her",
-                "add_tests": [
-                    "Troponin", "CK-MB", "LDH", "Homocysteine", "Amylase", "Lipase"
-                ]
-            },
-            {
-                "code": "royal_him",
-                "name": { "ar": "الباقة الملكية للرجال", "en": "Royal Package for Him" },
-                "price": { "value": 2828, "currency": "SAR" },
-                "color": "#1a237e",
-                "icon": "fa-diamond",
-                "gift": "250 SAR + Home Visit",
-                "description": {
-                    "ar": "العمق الكامل للصحة: تشمل المسح الفيروسي الشامل وفحص الحساسية الغذائية.",
-                    "en": "The full depth of health: including virus screening and food intolerance tests."
-                },
-                "extends": "elite_him",
-                "add_tests": [
-                    "Hepatitis B Surface Antigen", "Hepatitis C Antibody", "HIV", "Food Intolerance Test", "Celiac Panel", "Allergy Panel"
-                ]
-            },
-            {
-                "code": "royal_her",
-                "name": { "ar": "الباقة الملكية للسيدات", "en": "Royal Package for Her" },
-                "price": { "value": 2929, "currency": "SAR" },
-                "color": "#121858",
-                "icon": "fa-diamond",
-                "gift": "250 SAR + Home Visit",
-                "description": {
-                    "ar": "القمة في الرعاية الوقائية: تغطية شاملة للفيروسات والمناعة وحساسية الطعام.",
-                    "en": "The peak of preventive care: comprehensive coverage of viruses, immunity, and food allergy."
-                },
-                "extends": "elite_her",
-                "add_tests": [
-                    "Hepatitis B Surface Antigen", "Hepatitis C Antibody", "HIV", "Food Intolerance Test", "Celiac Panel", "Allergy Panel"
-                ]
-            }
-        ]
-    };
+(function () {
+    let PACKAGES_DATA = null;
 
     // Helper functions
     const getTotalCount = (code) => {
+        if (!PACKAGES_DATA) return 0;
         const pkg = PACKAGES_DATA.packages.find(p => p.code === code);
         if (!pkg) return 0;
         const currentCount = (pkg.tests || pkg.add_tests || []).length;
@@ -175,6 +17,7 @@
     };
 
     const getParentName = (code, isEn) => {
+        if (!PACKAGES_DATA) return null;
         const pkg = PACKAGES_DATA.packages.find(p => p.code === code);
         if (!pkg || !pkg.extends) return null;
         const parent = PACKAGES_DATA.packages.find(p => p.code === pkg.extends);
@@ -182,6 +25,7 @@
     };
 
     const resolveAllTests = (code) => {
+        if (!PACKAGES_DATA) return [];
         const pkg = PACKAGES_DATA.packages.find(p => p.code === code);
         if (!pkg) return [];
         let tests = [];
@@ -192,8 +36,14 @@
     };
 
     const run = () => {
+        if (!PACKAGES_DATA) return;
+
         const fullContainer = document.querySelector('.packages-grid-tiers');
-        const homeContainer = document.querySelector('.packages-grid');
+        const homeContainer = document.querySelector('.packages-grid'); // Fixed selector from previous code which might have been .packages-grid or similar
+        // Actually the previous code used .packages-grid. I should stick to what was there.
+        // Wait, line 196 in previous read: const homeContainer = document.querySelector('.packages-grid');
+        // line 374: if (homeContainer) ... logic for home page cards.
+
         const detailsContainer = document.getElementById('packageDetailsContainer');
         const isEn = document.documentElement.lang === 'en';
 
@@ -308,7 +158,7 @@
                     </div>
                 </div>
             `;
-            
+
             // Re-trigger reveal animations
             if (typeof window.triggerReveal === 'function') window.triggerReveal();
             return;
@@ -320,7 +170,7 @@
             PACKAGES_DATA.packages.forEach((pkg, index) => {
                 const card = document.createElement('div');
                 card.className = 'package-card-tier reveal';
-                
+
                 const detailsPage = isEn ? 'package-details-en.html' : 'package-details.html';
                 const detailsLink = `${detailsPage}?code=${pkg.code}`;
                 card.style.setProperty('--pkg-color', pkg.color);
@@ -368,16 +218,23 @@
                 `;
                 fullContainer.appendChild(card);
             });
+            if (typeof window.triggerReveal === 'function') window.triggerReveal();
         }
 
         // 3. Home Page Selection Update
         if (homeContainer) {
             homeContainer.innerHTML = '';
-            PACKAGES_DATA.packages.slice(0, 3).forEach((pkg) => {
+            // Just show top 3 for home
+            const homePackages = PACKAGES_DATA.packages.slice(0, 3);
+
+            homePackages.forEach((pkg) => {
                 const card = document.createElement('div');
                 card.className = 'package-card reveal';
+                // In Home, detailsPage might need path adjustment if home is index.html in root vs templates/en
+                // Assuming script runs in templates/en based on user task context.
                 const detailsPage = isEn ? 'package-details-en.html' : 'package-details.html';
                 const detailsLink = `${detailsPage}?code=${pkg.code}`;
+                const name = isEn ? pkg.name.en : pkg.name.ar;
                 const totalTests = getTotalCount(pkg.code);
                 const previewTests = (pkg.tests || pkg.add_tests || []).slice(0, 3);
 
@@ -399,12 +256,30 @@
                 `;
                 homeContainer.appendChild(card);
             });
+            if (typeof window.triggerReveal === 'function') window.triggerReveal();
+        }
+    };
+
+    const init = async () => {
+        try {
+            // Adjust path if needed. Assuming running from templates_files/{lang}/
+            const response = await fetch('../../assets/json_data/packages.json');
+            if (!response.ok) throw new Error('Failed to load packages.json');
+            PACKAGES_DATA = await response.json();
+            run();
+        } catch (error) {
+            console.error(error);
+            // Optionally handle error in UI
+            const container = document.querySelector('.packages-grid-tiers') || document.querySelector('.packages-grid') || document.getElementById('packageDetailsContainer');
+            if (container) {
+                container.innerHTML = '<div style="text-align:center; padding: 50px; color: red;">Failed to load packages data. Please try again later.</div>';
+            }
         }
     };
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', run);
+        document.addEventListener('DOMContentLoaded', init);
     } else {
-        run();
+        init();
     }
 })();
