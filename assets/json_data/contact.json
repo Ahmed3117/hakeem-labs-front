@@ -1,0 +1,12 @@
+{
+    "phone": "+966 9200 35397",
+    "email": "info@hakeemlabs.com",
+    "address": {
+        "en": "Riyadh: Al-Sulaimaniyah, King Abdulaziz Sub Road",
+        "ar": "الرياض : حي السليمانية، طريق الملك عبد العزيز الفرعي"
+    },
+    "working_hours": {
+        "en": "Saturday–Thursday: 07:30 AM – 10:00 PM | Friday: Closed",
+        "ar": "السبت–الخميس: 7:30 ص – 10:00 م | الجمعة: مغلق"
+    }
+}

@@ -1,0 +1,202 @@
+{
+    "laboratory_specialties": [
+        {
+            "title": {
+                "en": "Clinical Biochemistry",
+                "ar": "الكيمياء الحيوية السريرية"
+            },
+            "description": {
+                "en": "Analysis of vital functions and metabolism.",
+                "ar": "تحاليل الوظائف الحيوية والتمثيل الغذائي."
+            }
+        },
+        {
+            "title": {
+                "en": "Advanced Biochemistry",
+                "ar": "الكيمياء الحيوية المتقدمة"
+            },
+            "description": {
+                "en": "Specialized and highly technical tests.",
+                "ar": "تخصصات دقيقة وفحوصات تخصصية."
+            }
+        },
+        {
+            "title": {
+                "en": "Hematology",
+                "ar": "أمراض الدم"
+            },
+            "description": {
+                "en": "Complete blood component analysis.",
+                "ar": "فحوصات مكونات الدم الشاملة."
+            }
+        },
+        {
+            "title": {
+                "en": "Advanced Hematology",
+                "ar": "أمراض الدم المتقدمة"
+            },
+            "description": {
+                "en": "Specialized studies of blood cells.",
+                "ar": "دراسات تخصصية لخلايا الدم."
+            }
+        },
+        {
+            "title": {
+                "en": "Immunology & Serology",
+                "ar": "المناعة والمصلية"
+            },
+            "description": {
+                "en": "Study of immune reactions and antibodies.",
+                "ar": "دراسة التفاعلات المناعية والأجسام المضادة."
+            }
+        },
+        {
+            "title": {
+                "en": "Microbiology",
+                "ar": "الأحياء الدقيقة"
+            },
+            "description": {
+                "en": "Culture and testing of bacteria and fungi.",
+                "ar": "زراعة وفحص البكتيريا والفطريات."
+            }
+        },
+        {
+            "title": {
+                "en": "Molecular Biology & Genetics",
+                "ar": "الأحياء الجزيئية والجينات"
+            },
+            "description": {
+                "en": "Advanced genetic testing and PCR.",
+                "ar": "الفحوصات الوراثية المتقدمة و PCR."
+            }
+        },
+        {
+            "title": {
+                "en": "Histopathology & Cytology",
+                "ar": "الأنسجة والخلايا"
+            },
+            "description": {
+                "en": "Tissue study and cytological diagnosis.",
+                "ar": "دراسة عينات الأنسجة والتشخيص النسيجي."
+            }
+        },
+        {
+            "title": {
+                "en": "Coagulation",
+                "ar": "تجلط الدم"
+            },
+            "description": {
+                "en": "Testing for clotting factors and thinning.",
+                "ar": "فحوصات عوامل التجلط والسيولة."
+            }
+        },
+        {
+            "title": {
+                "en": "Tumor Markers",
+                "ar": "دلالات الأورام"
+            },
+            "description": {
+                "en": "Early detection and monitoring of tumors.",
+                "ar": "الكشف المبكر ومتابعة الأورام."
+            }
+        },
+        {
+            "title": {
+                "en": "Toxicology & Drug Abuse",
+                "ar": "السموم والمخدرات"
+            },
+            "description": {
+                "en": "Testing for toxins and controlled substances.",
+                "ar": "تحاليل الكشف عن السموم والمواد المخدرة."
+            }
+        },
+        {
+            "title": {
+                "en": "Virology",
+                "ar": "علم الفيروسات"
+            },
+            "description": {
+                "en": "Identification and diagnosis of viral diseases.",
+                "ar": "تحديد وتشخيص الأمراض الفيروسية."
+            }
+        },
+        {
+            "title": {
+                "en": "Tuberculosis",
+                "ar": "الدرن (السل)"
+            },
+            "description": {
+                "en": "Specialized unit for TB testing.",
+                "ar": "وحدة متخصصة لفحوصات التدرن."
+            }
+        },
+        {
+            "title": {
+                "en": "Blood Gases",
+                "ar": "غازات الدم"
+            },
+            "description": {
+                "en": "Analysis of blood gases and acid-base balance.",
+                "ar": "تحاليل غازات الدم والتوازن الحمضي."
+            }
+        },
+        {
+            "title": {
+                "en": "Water Testing",
+                "ar": "فحص المياه"
+            },
+            "description": {
+                "en": "Quality and safety tests for water.",
+                "ar": "اختبارات جودة وسلامة المياه."
+            }
+        },
+        {
+            "title": {
+                "en": "Extravascular Body Fluids",
+                "ar": "سوائل الجسم"
+            },
+            "description": {
+                "en": "Analysis of fluids outside of blood vessels.",
+                "ar": "تحليل السوائل خارج الأوعية الدموية."
+            }
+        }
+    ],
+    "medical_profiles": [
+        {
+            "en": "Cardiac Profile",
+            "ar": "ملف القلب"
+        },
+        {
+            "en": "Hypertension Profile",
+            "ar": "ملف ضغط الدم"
+        },
+        {
+            "en": "Thyroid Profile",
+            "ar": "ملف الغدة الدرقية"
+        },
+        {
+            "en": "Neonatal Profile",
+            "ar": "ملف حديثي الولادة"
+        },
+        {
+            "en": "Osteoporosis Profile",
+            "ar": "ملف هشاشة العظام"
+        },
+        {
+            "en": "Smoking Profile",
+            "ar": "ملف المدخنين"
+        },
+        {
+            "en": "Allergy Profile",
+            "ar": "ملف الحساسية"
+        },
+        {
+            "en": "Hirsutism Profile",
+            "ar": "ملف الشعر الزائد"
+        },
+        {
+            "en": "Pre-marriage Testing",
+            "ar": "فحص ما قبل الزواج"
+        }
+    ]
+}

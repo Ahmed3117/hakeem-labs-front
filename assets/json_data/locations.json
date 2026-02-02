@@ -1,0 +1,184 @@
+{
+    "locations": [
+        {
+            "regionAr": "المنطقة الوسطى",
+            "regionEn": "Central Region",
+            "branches": [
+                {
+                    "nameAr": "مختبر حكيم - المقر الرئيسي (الرياض)",
+                    "nameEn": "Hakeem Lab - Headquarters (Riyadh)",
+                    "addressAr": "الرياض : حي السليمانية، طريق الملك عبد العزيز الفرعي",
+                    "addressEn": "Riyadh: Al-Sulaimaniyah, King Abdulaziz Sub Road",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.482705123456!2d46.671!3d24.713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d48939b%3A0x60a9f74133fcdadb!2sRiyadh!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 24.7136,
+                    "lng": 46.6753
+                },
+                {
+                    "nameAr": "فرع بريدة",
+                    "nameEn": "Buraidah Branch",
+                    "addressAr": "طريق الملك عبد العزيز، بريدة",
+                    "addressEn": "King Abdulaziz Rd, Buraidah",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.906967733457!2d43.95!3d26.33!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e18d6e382d5e1f7%3A0xef74a5e30b0b0a8!2sBuraidah!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 26.326,
+                    "lng": 43.975
+                },
+                {
+                    "nameAr": "فرع عنيزة",
+                    "nameEn": "Unaizah Branch",
+                    "addressAr": "القصيم، عنيزة",
+                    "addressEn": "Unaizah, Qassim",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.906967733457!2d43.98!3d26.08!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e18d6e382d5e1f7%3A0xef74a5e30b0b0a8!2sUnaizah!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 26.0847,
+                    "lng": 43.9902
+                }
+            ]
+        },
+        {
+            "regionAr": "المنطقة الغربية",
+            "regionEn": "Western Region",
+            "branches": [
+                {
+                    "nameAr": "فرع جدة",
+                    "nameEn": "Jeddah Branch",
+                    "addressAr": "حي الروضة، جدة",
+                    "addressEn": "Al Rawdah, Jeddah",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3711.2!2d39.15!3d21.57!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d0!2sJeddah!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 21.5433,
+                    "lng": 39.1728
+                },
+                {
+                    "nameAr": "فرع مكة المكرمة",
+                    "nameEn": "Makkah Branch",
+                    "addressAr": "حي العوالي، مكة المكرمة",
+                    "addressEn": "Al Awali, Makkah",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.2!2d39.88!3d21.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c!2sMakkah!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 21.3891,
+                    "lng": 39.8579
+                },
+                {
+                    "nameAr": "فرع المدينة المنورة",
+                    "nameEn": "Madinah Branch",
+                    "addressAr": "شارع سعد بن خيثمة، المدينة المنورة",
+                    "addressEn": "Saad Bin Khaythamah St, Madinah",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.906967733457!2d39.6052733!3d24.47596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15b227c2f6d5e1f7%3A0xef74a5e30b0b0a8!2zSGFrZWVtIENlbnRlciAtINmF2LHZg9iyINin2YTYrdmD2YrZhQ!5e0!3m2!1sar!2ssa!4v1705664152345!5m2!1sar!2ssa",
+                    "lat": 24.4672,
+                    "lng": 39.6068
+                },
+                {
+                    "nameAr": "فرع الطائف",
+                    "nameEn": "Taif Branch",
+                    "addressAr": "حي شهار، الطائف",
+                    "addressEn": "Shahhar, Taif",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.2!2d40.4!3d21.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c!2sTaif!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 21.2854,
+                    "lng": 40.4258
+                }
+            ]
+        },
+        {
+            "regionAr": "المنطقة الشرقية",
+            "regionEn": "Eastern Region",
+            "branches": [
+                {
+                    "nameAr": "فرع الخبر",
+                    "nameEn": "Khobar Branch",
+                    "addressAr": "طريق الملك فيصل، الخبر",
+                    "addressEn": "King Faisal Rd, Khobar",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.2!2d50.2!3d26.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e!2sKhobar!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 26.2818,
+                    "lng": 50.2084
+                },
+                {
+                    "nameAr": "فرع الدمام",
+                    "nameEn": "Dammam Branch",
+                    "addressAr": "حي الشاطئ، الدمام",
+                    "addressEn": "Ash Shati, Dammam",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.2!2d50.1!3d26.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e!2sDammam!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 26.4207,
+                    "lng": 50.0888
+                },
+                {
+                    "nameAr": "فرع الأحساء",
+                    "nameEn": "Al Ahsa Branch",
+                    "addressAr": "حي المبرز، الأحساء",
+                    "addressEn": "Al Mubarraz, Al Ahsa",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.2!2d49.6!3d25.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e!2sAl%20Ahsa!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 25.3833,
+                    "lng": 49.5833
+                }
+            ]
+        },
+        {
+            "regionAr": "باقي المناطق",
+            "regionEn": "Other Regions",
+            "branches": [
+                {
+                    "nameAr": "فرع خميس مشيط",
+                    "nameEn": "Khamis Mushait Branch",
+                    "addressAr": "خميس مشيط، عسير",
+                    "addressEn": "Khamis Mushait, Asir",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.2!2d42.7!3d18.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e!2sKhamis%20Mushait!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 18.3,
+                    "lng": 42.7333
+                },
+                {
+                    "nameAr": "فرع جازان",
+                    "nameEn": "Jazan Branch",
+                    "addressAr": "جازان، المملكة العربية السعودية",
+                    "addressEn": "Jazan, KSA",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.2!2d42.5!3d16.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x160!2sJazan!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 16.8892,
+                    "lng": 42.5511
+                },
+                {
+                    "nameAr": "فرع تبوك",
+                    "nameEn": "Tabuk Branch",
+                    "addressAr": "تبوك، حي المروج",
+                    "addressEn": "Al Muruj, Tabuk",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2!2d36.5!3d28.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15!2sTabuk!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 28.3835,
+                    "lng": 36.5662
+                },
+                {
+                    "nameAr": "فرع حائل",
+                    "nameEn": "Hail Branch",
+                    "addressAr": "حائل، حي النقرة",
+                    "addressEn": "An Naqrah, Hail",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.2!2d41.7!3d27.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15!2sHail!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "lat": 27.5236,
+                    "lng": 41.6961
+                }
+            ]
+        },
+        {
+            "regionAr": "فروع قريباً",
+            "regionEn": "Coming Soon",
+            "branches": [
+                {
+                    "nameAr": "فرع الجبيل",
+                    "nameEn": "Jubail Branch",
+                    "addressAr": "الجبيل، قريباً",
+                    "addressEn": "Jubail, Coming Soon",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584!2d49.6!3d27.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e!2sJubail!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "soon": true
+                },
+                {
+                    "nameAr": "فرع الخرج",
+                    "nameEn": "Al Kharj Branch",
+                    "addressAr": "الخرج، قريباً",
+                    "addressEn": "Al Kharj, Coming Soon",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36!2d47!3d24!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e!2sAl%20Kharj!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "soon": true
+                },
+                {
+                    "nameAr": "فرع أبها",
+                    "nameEn": "Abha Branch",
+                    "addressAr": "أبها، قريباً",
+                    "addressEn": "Abha, Coming Soon",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37!2d42!3d18!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15!2sAbha!5e0!3m2!1sen!2ssa!4v1705664152345!5m2!1sen!2ssa",
+                    "soon": true
+                }
+            ]
+        }
+    ]
+}

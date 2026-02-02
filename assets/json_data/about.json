@@ -1,0 +1,78 @@
+{
+    "vision": {
+        "en": "To be Saudi Arabia’s preferred diagnostic and wellness partner, improve longevity through data-driven care and shared value for all, by empowering everyone.",
+        "ar": "أن نكون الشريك المفضل والمنصة الموثوقة للخدمات التشخيصية في المملكة العربية السعودية، نساهم في تعزيز جودة الحياة وإطالة العمر الصحي عبر الرعاية القائمة على البيانات، وتحقيق قيمة مستدامة تضمن تمكين كافة فئات المجتمع."
+    },
+    "mission": {
+        "en": "To honor the human story behind every sample. We commit to improvement and respect for time, empowering our people to serve Vision 2030 as your lifelong partner.",
+        "ar": "نلتزم بتقدير القيمة الإنسانية الكامنة خلف كل عينة مخبرية، وتسخير طاقاتنا للتطوير المستمر واستثمار الوقت بكفاءة، مع تمكين الكفاءات الوطنية للمساهمة في تحقيق طموحات رؤية المملكة 2030 كشريك موثوق في رحلة الصحة."
+    },
+    "hakeem_code": [
+        {
+            "letter": "H",
+            "title": {
+                "en": "Honor the Story",
+                "ar": "الخصوصية الإنسانية"
+            },
+            "description": {
+                "en": "Every sample represents a human life and story.",
+                "ar": "كل عينة تمثل حياة إنسان وقصة عائلة."
+            }
+        },
+        {
+            "letter": "A",
+            "title": {
+                "en": "Agility with Precision",
+                "ar": "المرونة والإتقان"
+            },
+            "description": {
+                "en": "Fast delivery without compromising accuracy.",
+                "ar": "السرعة في الإنجاز دون المساس بالدقة."
+            }
+        },
+        {
+            "letter": "K",
+            "title": {
+                "en": "Knowledge for Impact",
+                "ar": "المعرفة المؤثرة"
+            },
+            "description": {
+                "en": "Turning data into wisdom that empowers decisions.",
+                "ar": "تحويل البيانات إلى بصيرة تمكّن القرار."
+            }
+        },
+        {
+            "letter": "E",
+            "title": {
+                "en": "Excellence in Every Detail",
+                "ar": "التميز في التفاصيل"
+            },
+            "description": {
+                "en": "Zero defects in service and analysis.",
+                "ar": "صفر أخطاء في الخدمة والتحليل."
+            }
+        },
+        {
+            "letter": "E",
+            "title": {
+                "en": "Evolve Daily",
+                "ar": "التطور المستمر"
+            },
+            "description": {
+                "en": "Continuous self-improvement mindset.",
+                "ar": "عقلية التحسين المستمر والتراكم الإيجابي."
+            }
+        },
+        {
+            "letter": "M",
+            "title": {
+                "en": "Mission-Driven Ownership",
+                "ar": "ملكية الرسالة"
+            },
+            "description": {
+                "en": "Ownership mindset aligned with Vision 2030.",
+                "ar": "تحمل المسؤولية والمبادرة لتحقيق رؤية 2030."
+            }
+        }
+    ]
+}
